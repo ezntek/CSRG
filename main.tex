@@ -1,14 +1,18 @@
 \documentclass[a4paper, 12pt, oneside]{book} % we are not printing this like a book
 \usepackage[hmargin=2.5cm,vmargin=3cm,bindingoffset=0.5cm]{geometry}
-\usepackage{graphicx,blindtext,subfiles}
-\usepackage{etoolbox}
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{subfiles}
+\usepackage{fancyhdr}
+
 \graphicspath{images/}
 
 \title{The IGCSE Computer Science Revision Guide}
 \author{Eason Qin (eason@ezntek.com)}
 \date{February 2025}
 
-\usepackage{fancyhdr}
 \pagestyle{fancy}
 \setlength{\headheight}{15pt}
 \fancyhf{}
@@ -24,17 +28,9 @@
 % TOC
 \tableofcontents
 
-\addcontentsline{toc}{chapter}{Introduction}
 \chapter*{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
 \markboth{Introduction}{Introduction} % ew
-\subfile{sections/introduction}
-
-\addcontentsline{toc}{section}{License Notice}
-\section*{License Notice}
-\subfile{sections/license}
-
-\addcontentsline{toc}{section}{Preface}
-\section*{Preface}
-\subfile{sections/preface}
+\subfile{chapters/introduction}
 
 \end{document}
