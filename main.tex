@@ -1,6 +1,6 @@
 \documentclass[a4paper, oneside, 11pt]{book} % we are not printing this like a book
 \usepackage[hmargin=2cm,vmargin=2.5cm,bindingoffset=0.5cm]{geometry}
-\usepackage[hidelinks]{hyperref}
+\usepackage[colorlinks=true]{hyperref}
 \usepackage{bookmark}
 \usepackage{graphicx}
 \usepackage{blindtext}
@@ -8,18 +8,36 @@
 \usepackage{fancyhdr}
 \usepackage{plex-serif}
 \usepackage{fontspec}
-\setlength{\spaceskip}{0.5em plus 0.15em minus 0.15em}
+\usepackage{titlesec}
+\usepackage{minted}
+\usepackage{cascadia-code}
 
+% font spacing
+\setlength{\spaceskip}{0.55em plus 0.15em minus 0.15em}
+
+% image paths
 \graphicspath{images/}
 
-\title{The IGCSE Computer Science Revision Guide}
-\author{Eason Qin (eason@ezntek.com)}
-\date{February 2025}
+% mono
+\newcommand{\mono}{\fontfamily{ccode}\selectfont} 
 
 % paragraph spacing
 \setlength{\parskip}{1em}
 % no indenting paragraphs (its 2025)
 \setlength{\parindent}{0pt}
+
+% nicer paragraph headings
+\usepackage{titlesec}
+\titleformat{\paragraph}
+  {\normalfont\bfseries}
+  {}
+  {0pt}
+  {} 
+\titleformat{\subparagraph}
+  {\normalfont\bfseries}
+  {}
+  {0pt}
+  {}
 
 % page styling
 \pagestyle{fancy}
@@ -28,6 +46,11 @@
 \fancyhead[L]{The IGCSE Computer Science Revision Guide}
 \fancyhead[R]{\nouppercase{\leftmark}}
 \fancyfoot[C]{\thepage}
+
+% info
+\title{The IGCSE Computer Science Revision Guide}
+\author{Eason Qin (eason@ezntek.com)}
+\date{February 2025}
 
 \begin{document}
 
