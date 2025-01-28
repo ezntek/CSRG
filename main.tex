@@ -1,4 +1,4 @@
-\documentclass[a4paper, oneside, 12pt]{book} % we are not printing this like a book
+\documentclass[a4paper, oneside, 11pt]{book} % we are not printing this like a book
 \usepackage[hmargin=2cm,vmargin=2.5cm,bindingoffset=0.5cm]{geometry}
 \usepackage[hidelinks]{hyperref}
 \usepackage{bookmark}
@@ -6,6 +6,9 @@
 \usepackage{blindtext}
 \usepackage{subfiles}
 \usepackage{fancyhdr}
+\usepackage{plex-serif}
+\usepackage{fontspec}
+\setlength{\spaceskip}{0.5em plus 0.15em minus 0.15em}
 
 \graphicspath{images/}
 
@@ -39,5 +42,8 @@
 \markboth{Introduction}{Introduction} % ew
 \label{introduction}
 \subfile{chapters/introduction}
+
+\chapter{Data Representation}
+\subfile{chapters/1_data_representation}
 
 \end{document}
