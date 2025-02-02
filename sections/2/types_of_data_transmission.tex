@@ -1,0 +1,33 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../../images/}}}
+
+\begin{document}
+
+There exists several modes of data transmission:
+
+\begin{itemize}
+
+\item \textbf{Serial Transmission:} This is the process of sending data through one single channel, one bit at a
+    time. It is slow, but reliable for small amounts of data. This is used by USB, the kind of connector that is used for flash drives, most modern
+    peripherals like mice and keyboards, and other devices.
+
+    All generations of USB\footnote{There are multiple generations of USB, please check \hyperref[2:usb]{this section} for more information.} that
+    make use of the USB-A conector use serial exclusively.
+
+\item \textbf{Parallel Transmission:} This is the process of sending multiple bits at once, thorugh multiple channels concurrently\footnote{At the
+    same time.}. This is faster, but it requires more computational resources, and can be prone to errors if one lane is congested\footnote{
+    Thought problem: If parallel uses many data channels to send 4 bits, and the second channel is clogged somehow, will the data send, and will
+    there be an error? The solution is trivial and explains this property.}. The data may also become skewed\footnote{Arrive out-of-order.}, and may
+    cause unwanted issues.
+
+\item \textbf{Simplex:} This is when data can only be sent one way.
+
+\item \textbf{Half Duplex (HD):} This is when one device can send data at one time, like a walkie-talkie. The other device must wait until the data
+    is fully sent; only then can they respond. This method is used in some radio communication protocols.
+
+\item \textbf{Full Duplex (FD):} This is when data can be sent both ways at the same time. This is like a phone call or video chat, where both people can
+    talk simultaneously. This is used in video conferences, phone chats and real-time web applications.
+
+\end{itemize}
+
+\end{document}
