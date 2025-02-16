@@ -10,7 +10,16 @@
 \usepackage{fontspec}
 \usepackage{titlesec}
 \usepackage{minted}
-\usepackage{cascadia-code}
+\setmonofont{Cascadia Code}
+
+\newfontfamily\ccbold{Cascadia Code Bold}
+\newfontfamily\ccitalic{Cascadia Code Italic}
+\newfontfamily\ccmono{Cascadia Code} % For monospace
+
+\usepackage{cellspace}
+\setlength\cellspacetoplimit{10pt} % Minimum space above cell content
+\setlength\cellspacebottomlimit{10pt} % Minimum space below cell content
+
 
 % italic captions
 \usepackage[format=plain,
@@ -54,6 +63,14 @@
 \fancyhead[L]{\textbf{The IGCSE Computer Science Revision Guide}}
 \fancyhead[R]{\nouppercase{\leftmark}}
 \fancyfoot[C]{\thepage}
+
+\setlength{\arrayrulewidth}{0.3pt}
+
+\setminted{
+    bgcolor=lightlightgray,
+    linenos=true,
+    tabsize=4
+}
 
 % info
 \title{The IGCSE Computer Science Revision Guide}
