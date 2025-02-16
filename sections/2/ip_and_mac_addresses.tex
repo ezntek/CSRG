@@ -34,6 +34,8 @@ These IP addresses denote the location of your home router or other routers on t
 
 The only rule they must follow is that their addresses cannot be in the range of \hyperref[tab:private_ip_classes]{private IP addresses}.
 
+% TODO: graphics?
+
 \paragraph{Private IPv4 Addresses}
 
 Private IP addresses are like public IP addresses, but instead of it being publicly accessible to everybody on the internet, they are only accessible to users connected to a private network, like a phone hotspot or the network created by your router. Every device on, say, your home network like your phone or your mom's work laptop have a private IP. These addresses are then mapped to public IP addresses through NATs (Network Address Translators); more details in section \ref{2:sec:nats}.
@@ -58,9 +60,49 @@ Note that you do not need to memorize the class letters nor the exact ranges, yo
 
 These private IPs belong in a local network, where devices in the same approximate geographical location are connected to a router.
 
-\subsubsection{Dynamic IP assignment}
+\subsection{IPv4 Address Assignment}
+
+When you connect to the school network or your home WiFi network, you need to get an IP address in order for your device to communicate with the router, to transmit data to and from websites like Google. Without it, your device would be useless. 
 
 \subsubsection{Static IP assignment}
+
+You must ask the router for an IP address; and there are 2 main methods. This one is called static IP assignment; this means that the IP address you have on the network does \textbf{not} change, and \emph{your device chooses the IP address it has}. The IP you assign to yourself is now assigned to you for an indefinite\footnote{not infinite, just an unknown amount of time} time.
+
+\textbf{Pros include:}
+\begin{itemize}
+    \item It is good for servers, because your location on the network does not change. Computers on the network will be able to find you easier.
+    \item The connection process is much faster, as you don't have to ask for one.
+    % TODO: link up static NATs
+    \item You get faster upload/download speeds (only if you use a static NAT!\footnote{You will learn about NATs in a later section. Here, it means that a private address is directly mapped to the public address of your router.})
+\end{itemize}
+
+\textbf{Cons include:}
+\begin{itemize}
+    \item on a large private network, your location on the network is more easily identifiable, as your IP doesn't change.
+    \item you cannot tell if the IP you assigned to yourself is available or not.\footnote{You can always ping the IP address to see if a device at that IP responds. If there is no response, there is no device at the IP.}
+    \item it is expensive to maintain, as the device at the address must constantly be on to be available.
+\end{itemize}
+
+\subsubsection{Dynamic IP assignment}
+
+% TODO: diagram
+
+This is like static IP assignment, as you are receiving an IP address to identify yourself. But here, you use a protocol called DHCP (Dynamic Host Configuration Protocol) to talk to the router nicely to ask for an available IP address. Every time you connect to the network, your device talks to the router for an IP. Sometimes it is different, and sometimes it is the same as before.
+
+This is by far the most common method.
+
+\textbf{Pros include:}
+\begin{itemize}
+    \item On large public networks, it tends to change more often, making it more secure.
+    \item It is a lot more convenient, as the device does not have to set their own IP before connecting.
+\end{itemize}
+
+\textbf{Cons include:}
+\begin{itemize}
+    \item If you're connected to a video call or voice call through VoIP\footnote{Basically making phone or video calls through a network and not cell towers.}, if your IP address changes, it may disconnect the call\footnote{It is not necessarily true, as your IP is not jumbled at regular intervals.}.
+    \item If your device is old and does not support the DHCP protocol, you cannot use it. In short, it may not support all devices.
+    \item Connection time takes longer, you must send a {\mono DHCPLEASE} message to the router for the IP, the router must calculate an IP, and the router must send a {\mono DHCPBACK} with your IP. This typically takes 5 seconds but may take up to 25 seconds.
+\end{itemize}
 
 \subsection{MAC addresses}
 
