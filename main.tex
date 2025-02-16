@@ -3,13 +3,13 @@
 \usepackage[colorlinks=true]{hyperref}
 \usepackage{bookmark}
 \usepackage{graphicx}
-\usepackage{blindtext}
 \usepackage{subfiles}
 \usepackage{fancyhdr}
 \usepackage{plex-serif}
 \usepackage{fontspec}
 \usepackage{titlesec}
 \usepackage{minted}
+\usepackage{longtable}
 \setmonofont{Cascadia Code}
 
 \newfontfamily\ccbold{Cascadia Code Bold}
@@ -61,6 +61,7 @@
 \fancyfoot[C]{\thepage}
 
 \setlength{\arrayrulewidth}{0.3pt}
+\renewcommand{\arraystretch}{1.3}
 
 \setminted{
     bgcolor=lightlightgray,
