@@ -166,9 +166,10 @@ NATs helps one accomplish this. They allow private IP addresses and public IP ad
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{nat.jpg}
-    \caption{A diagram explaining how network addresses are mapped to public IPs through the NAT.\footnote{Taken from \url{https://en.wikipedia.org/wiki/Network_address_translation#/media/File:Network_Address_Translation_(file2).jpg}}}
+    \caption{A diagram explaining how network addresses are mapped to public IPs through the NAT.\footnotemark}
     \label{fig:nat}
 \end{figure}
+\footnotetext{Taken from \url{https://en.wikipedia.org/wiki/Network_address_translation#/media/File:Network_Address_Translation_(file2).jpg}}
 
 As seen in figure \ref{fig:nat}, computers on the home network can request for websites (in this case, Yahoo, as the diagram is presumably very old), and the NAT in the router can add your device to a tempoary table that shows where traffic from one private IP should go, and vice versa.\footnote{Do not worry about the port; this allows 65535 channels of data to be open on one IP address, as one single IP is quite limiting.}
 

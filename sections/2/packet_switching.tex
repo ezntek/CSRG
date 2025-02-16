@@ -33,19 +33,36 @@ Here are they:
 
 \item The trailer, which consists of:
     \begin{itemize}
-
     \item Some way of identifying the end of the packet. This is typically some special value like a null terminator\footnote{In programming,
           this is referred to as a \emph{sentinel value}, which just means a value that carries some special meaning. An example is like in the
           C programming language, to tell the end of a string, a sentinel value of 0 is used to denote the string finished.}. The algorithm can
           then scan the data until it hit that character to extract the payload.
     \item An error checking method. CRCs are used to check this.
-    
     \end{itemize}
-
 \end{itemize}
 
 \subsection{Packet Switching}
 
-In order to transfer packets from one place to another
+Packet switching is the next step after slicing up data into packets. This is done because sending data across large distances all at once is prone to failure (what happens if a slight portion of the data is corrupted? the data must be sent all over again, taking time). 
+
+This technique involves sending packets onto multiple paths that reach the same destination. They begin by being sent out onto the network; they travel seperately but at the same time and when all the packets arrive at the destination, they are put back together via the sequence number. The role of the router on each node is to determine the next router the packet should go to. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{packetswitching.png}
+    \caption{A diagram to illustrate packet switching.}
+    \label{fig:packetswitching}
+\end{figure}
+
+Each yellow circle can be interpreted as an intersection on a road. The general term for these are nodes, but they are technically just routers.
+
+Figure \ref{fig:packetswitching} has 4 packets that must be sent. The key points are:
+
+\begin{itemize}
+    \item The path between the source and the destination are made up of the yellow circles; the nodes.
+    \item Each packet takes a different path, i.e. the red packet takes 1-4-7-8, but the blue packet takes 1-2-3-8, etc.
+    \item The router at each node will decide the next router the packet should go to. The shortest \emph{available} route is always taken but not the \emph{absolute shortest} route.
+    \item When the packets arrive, they will be put back in order according to the sequence number (not depicted).
+\end{itemize}
 
 \end{document}
