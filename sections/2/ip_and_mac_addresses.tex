@@ -108,7 +108,7 @@ This is by far the most common method.
 
 MAC addresses are 48 bit numbers that identify your device uniquely on any given network. They are typically represented as 3 hexadecimal numbers:
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.7\textwidth]{macaddress_breakdown.png}
     \caption{A breakdown of the portions of a MAC address.}
@@ -117,7 +117,7 @@ MAC addresses are 48 bit numbers that identify your device uniquely on any given
 
 The first 3 hexadecimal bytes (2 digits) identify the maker of the device\footnote{Technically the NIC or Network Interface Card itself}, like Apple\footnote{Not necessarily, again, it identifies the maker of the NIC.}. The last 3 digits uniquely identifies the device itself.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.7\textwidth]{macaddress.png}
     \caption{The MAC address of a computer, running Arch Linux.}
@@ -166,10 +166,9 @@ NATs helps one accomplish this. They allow private IP addresses and public IP ad
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{nat.jpg}
-    \caption{A diagram explaining how network addresses are mapped to public IPs through the NAT.\footnotemark}
+    \caption{A diagram explaining how network addresses are mapped to public IPs through the NAT. Taken from Wikipedia.}
     \label{fig:nat}
 \end{figure}
-\footnotetext{Taken from \url{https://en.wikipedia.org/wiki/Network_address_translation#/media/File:Network_Address_Translation_(file2).jpg}}
 
 As seen in figure \ref{fig:nat}, computers on the home network can request for websites (in this case, Yahoo, as the diagram is presumably very old), and the NAT in the router can add your device to a tempoary table that shows where traffic from one private IP should go, and vice versa.\footnote{Do not worry about the port; this allows 65535 channels of data to be open on one IP address, as one single IP is quite limiting.}
 
