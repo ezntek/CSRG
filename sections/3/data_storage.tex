@@ -109,7 +109,23 @@ The main use of ROM in computers is to store the BIOS/UEFI. This is code that th
 
 \subsection{Virtual Memory}
 
+Virtual Memory is quite a complicated topic. In essence, it is memory made by combining physical RAM and space on your hard drive (HDD or SSD) called the swap space, swap area or swap file to create chunks of memory for each program to use independently.
+
+A diagram illustrates this:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{virtmem.png}
+    \caption{A diagram explaining virtual memory.}
+    \label{fig:virtmem}
+\end{figure}
+
+Each program gets its own slice of the virtual memory, so that memory regions do not accidentially overlap, causing unintended errors. This is also partly for security, so that malicious programs cannot read, say, the passwords in your browser. It is important to note that slices of virtual memory are not all of uniform size. Each slice's location in actual physical memory and in swap may be different.
+
+The process of putting something explicitly into swap memory is called \textbf{paging in}, given one of those chunks in figure \ref{fig:virtmem} is called a page. Moving something out is called \textbf{paging out}.
+
 \subsection{HDDs (Hard disk drives)}
+
 
 \subsection{SSDs (Solid state drives)}
 
