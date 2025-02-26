@@ -5,6 +5,20 @@
 
 Computers need to store data in order to function, like code, or data meaningful to you, like documents and images. Storage devices accomplish this. There are 2 main categories of storage devices, which will be covered here.
 
+\subsection{Primary vs Secondary Storage}
+
+The key difference is that \textbf{Primary Storage can be directly addressed by the CPU}, whereas \textbf{Secondary Storage must be accessed via the I/O controller} (see figure \ref{fig:vonneumann}.) A more comprehensive table is given:
+
+\begin{longtable}{|p{0.4\textwidth}|p{0.4\textwidth}|}
+    \hline
+    \textbf{Primary Storage} & \textbf{Secondary Storage} 
+    \\ \hline
+    Primary storage can be directly addressed by the CPU, like ROM and RAM. & Secondary storage cannot be addressed directly. Instead, the I/O controller must fetch the data for the CPU, and only then is the data visiblnne to the CPU.
+    \\ \hline
+    Primary storage does not have to be loaded somewhere before it can be put into the CPU. & The data from secondary storage \emph{must} be loaded into RAM first, then is it accessible to the CPU.
+    \\ \hline
+\end{longtable}
+
 \subsection{RAM}
 \label{3:sec:ram}
 
@@ -232,10 +246,20 @@ Barcodes are stick shaped codes usually printed on grocery products. They are ev
 
 \subsection{QR Codes}
 
-QR codes are like barcodes, but 2D.
+QR codes are like barcodes, but 2D. Consider the following QR code that stores some text:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{qrcode.png}
+    \caption{A QR code.}
+    \label{fig:qrcode}
+\end{figure}
+
+They are 2D matrices of squares that store small amounts of data; but more so than barcodes. They store binary data, and have error correction data encoded within them, to avoid errors in reading when the QR code is damaged. There are also large regions that act as anchors for QR code reading software to de-warp the QR code if scanned at an angle.
 
 \subsection{Medium vs. Storage Device}
 \label{3:sec:medium_vs_storage_device}
 
+The important distinction between a medium and a storage device is that \textbf{The medium is the physical material that stores data; the binary 1s and 0s} whereas \textbf{The storage device is an electronic piece of hardware that retreives and writes data to the medium.} 
 
 \end{document}
