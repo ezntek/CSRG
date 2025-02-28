@@ -1,0 +1,72 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../../images/}}}
+
+\begin{document}
+
+Automated systems are a mix of software and hardware that control things or do tasks that have to do with the real world. They are mainly designed to work without a person needing to operate it.
+
+\paragraph{A recap on sensors}
+
+\begin{itemize}
+    \item \textbf{Temperature Sensors} which measures the surrounding temperature
+    \item \textbf{Humidity Sensors} which measures humidity
+    \item \textbf{Acoustic Sensors} which detects sound, e.g. the sound of a thief breaking into a museum
+    \item \textbf{Pressure Sensors} which measures pressure and can be used, for example, to check if something has been pressed
+    \item \textbf{Active Infrared Sensors} which detects if there is any obstruction by sending and receiving an IR signal to and from the receiver respectively. 
+    \item \textbf{Passive Infrared Sensors} which detect IR heat radiation. All objects that are hot in terms of temperature all emit some amount of Infrared light
+    \item \textbf{Gyroscopes}\footnote{Many types, 3 rotating wheels are the simplest. MEMS (vibrating structure) used in phones.} detects the orientation of an object in 3D space (i.e. phones, cars, etc.). 
+    \item \textbf{Accelerometers} detects the acceleration of an object in 2D space (i.e. phones, cars, etc.). Almost all modern gyroscopes can act as accelerometers.
+\end{itemize}
+
+The typical automated system involves:
+
+\begin{itemize}
+    \item Sensors constantly provide readings
+    \item Programs (run on the microprocessor\footnote{Like a CPU, it is an integrated circuit on a single chip} of the device and processes the readings. If the data is analog, it invokes an ADC\footnote{An analog to digital converter, this converts continuous analog data with an infinite decimal range to binary 1’s and 0’s with a finite and defined range, so a computer can make sense of it.}
+    \item The program either logs it or invokes an actuator\footnote{Another term tested in the previous examination, these are devices that can be controlled via a program that change the surrounding environment; like a solenoid that pushes things around, or a (bigger) piston, pump, valve, etc.} to reflect something.
+\end{itemize}
+
+Let’s think of a common automated system in many of our houses, a Roomba or an autonomous vacuum cleaner. 
+
+\begin{itemize}
+    \item The sensors in the Roomba, i.e., proximity sensors, gyroscopes, light sensors, etc. sense for obstacles and sudden jolts (i.e., picked up by human or violently kicked by dog) and constantly feed the device with data
+    \item The Program running on the CPU likely runs the following code:
+        \begin{itemize}
+            \item If there is an obstacle in front, turn some number of degrees until nothing is in front
+            \item If there is a sudden jolt detected, do not power on the motor, and do not power on the vacuum.
+            \item Otherwise, power on the motor and continue sucking the floor for dust.
+        \end{itemize}
+    \item The actuators include the motors and the vacuum pump that sucks up dust.
+\end{itemize}
+
+\subsection{Applications}
+
+Automated systems have a lot of applications (Taken from textbook and syllabus).
+
+\begin{itemize}
+    \item \textbf{Agriculture}
+    \item \textbf{Transport}
+    \item \textbf{Industry}
+    \item \textbf{Video Games} (Helping gamers with their workflows?)
+    \item \textbf{Home Decoration and tools} (Roomba's? Smart LED lights or bulbs? Smart home devices?)
+\end{itemize}
+
+\subsection{Advantages of Automated Systems}
+\begin{itemize}
+    \item \textbf{Automated systems tend to be a lot faster} than a human in terms of response time for necessary actions
+    \item \textbf{Automated systems tend to be safer} as it is more likely to respond to critical events, therefore sparing humans from the hassle
+    \item \textbf{Automated systems tend to be more productive} as they are efficient and specialized to do one thing, therefore typically making less errors than humans do
+    \item \textbf{Automated systems tend to be more consistent} as they are usually programmed to do the exact same thing over and over again, meaning that the outcomes reflect it
+    \item \textbf{Automated systems tend to use less resources} as they are programmed specifically to use exact amounts of inputs to produce outputs, with fewer chances of error.
+\end{itemize}
+
+\subsection{Disadvantages of Automated Systems}
+\begin{itemize}
+    \item \textbf{They are expensive to set up} as they require a lot of human effort to set up, program, and maintain
+    \item \textbf{They must be thoroughly tested}
+    \item \textbf{Bugs in the system can cause it to stall}, if the developers were not careful. This can do things like halt production in a factory-related setting. 
+    \item \textbf{They can be maintenance-intensive} as these computerized systems tend to cause issues if they are not being watched to a degree, with necessary actions being taken on the fly
+    \item \textbf{Automated systems that connect to networks are subject to cyber-attacks}, which may halt critical processes.
+\end{itemize}
+
+\end{document}
