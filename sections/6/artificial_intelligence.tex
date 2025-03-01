@@ -3,6 +3,132 @@
 
 \begin{document}
 
+\emph{Note: AI shills and knowledgeable people, some of this information may be completely outdated or grossly oversimplified; this is simply what the syllabus requires us to know.}
 
+Artificial intelligence is a branch of computer science and a popular field of research that goes into how computers can simulate the “intelligence” of Human beings. A large portion of it is to let these systems adopt the mental process of acquiring, synthesizing and rephrasing knowledge in a human language for humans to interact with.
+
+These systems all occur in humans, but through A LOT of statistics\footnote{AI is simply applied statistics, not black magic. Ask your math teacher (who may ask a smarter math teacher), it heavily uses a concept known as regression (estimating relationships) and a lot of calculus.} they can be replicated by a machine to an extent. They are benchmarked against things like reasoning, Language generation, sight, among others; Despite how AIs cannot truly replicate these human actions and reason for themselves\footnote{This may change in the future, however the best LLM technology like ChatGPT 4o and o1 all rely on transforming the inputs given directly; all the “reasoning” it has is derived from a human’s natural reasoning that the LLM simply re-spits.}.
+
+\subsection{Characteristics}
+
+AI, at its core, is simply a collection of data and rules, generated from a dataset (one word). However, different types of AI systems make use of said data in different ways, but they are all processed, synthesized through a machine algorithm that mimics that of humans; and regurgitates it.
+
+All you must know is that they can be split into 3 categories:
+
+\begin{itemize}
+    \item \textbf{Narrow AI} are AI systems that specialize into one narrow area, and typically perform better than humans in that area.
+    \item \textbf{General AI} are AI systems that performs similarly but not superior to a human in genral cases. They typically cover broader ranges of operations, but are not as good as real professionals.
+    \item \textbf{Strong AI} is when a machine has equal or better performance than a real human in a broad range of tasks. However, it has not been reached yet.
+\end{itemize}
+
+\subsection{Reasoning}
+
+This is a process in AI systems where a system provides/generates conclusions on a set of data.
+
+It is developed by feeding an AI system a set of factually correct data\footnote{A big problem in AI is that bias always exists. There is no way to get a large, diverse set of perfectly factual data. If the example of the kitchen and chef cooking fried rice is read, maybe the instructor of the culinary school really likes the food spicy, so the chef ends up making all his dishes spicy.}. In the context of a kitchen, a chef learns in culinary school details on how to cook the best-tasting plate of fried rice. All these facts are provided to the chef, and after enough training, the chef is able to learn the information and then apply it to be able to make the perfect plate of stir-fried noodles, or maybe even pasta. The chef would then naturally change its techniques to adapt it to the desired result.
+
+Through this training, AI can deduce facts and reason that if these facts hold true for creating this outcome, these similar facts should be true for creating a similar outcome. It can quickly do so as these systems tend to be specialized in doing that specifically, and then make relatively factual predictions based on the factual inputs. This is how an AI system can adapt.\footnote{Further details are not provided as it is out of the syllabus.}
+
+\subsection{Examples}
+
+\begin{itemize}
+    \item Smart home assistants, such as Apple’s Siri, Google’s Assistant, and Microsoft’s now-discontinued Cortana. The program interacts with the user by using speech-to-text models\footnote{These are AI systems that detect common speech patterns and correlates them to text, therefore translating phrases and words that are spoken to text form.} and then analyses the patterns in them to provide a result.
+    \item Translation systems such as Google Translate, DeepL, etc.
+    \item Math-solving AIs such as Wolfram Alpha, MathPile, or word problems through OpenAI for natural language processing (commonspeak).
+    \item Large Language Models, or LLMs, like ChatGPT, Claude, LLaMa, etc. These are large transformer AI systems that take text as input and are trained\footnote{Through building general knowledge, followed by fine-tuning to specialize into a certain field.} on those data points\footnote{Including supervised learning, self-supervised learning, and reinforcement learning.}, and then are transformed based on a prompt that generates text.
+\end{itemize}
+
+\subsection{Expert Systems}
+
+These are developed to mimic human knowledge and experiences, and uses them to solve problems that would normally require a human expert. The expert system will produce a conclusion and may output the probability of accuracy of its conclusion. As of current, they are outdated and have largely been replaced by Machine Learning (see section \ref{6:sec:ml}.)
+
+There are two parts to an expert system, the user interface which is a portion of code for the user to interact with (usually the explanation system), and the actual functional portion (the part that does the work), consisting of the inference engine, rules base, and the knowledge base.
+
+\paragraph{Knowledge Base}
+
+\begin{itemize}
+    \item Is a collection of facts accepted from multiple experts and expert resources in the chosen field.
+    \item Represents data through objects and their attributes. For example, the object ‘Dog’ would contain the following attributes: 4 legs, 2 eyes, 50 km/s running speed, is fluffy, swims, lives on land.
+\end{itemize}
+
+\begin{tabularx}{\textwidth}{|>{\columncolor{blue!20}}X|X|X|X|X|X|X|X|}
+    \hline
+    \rowcolor{gray!20}
+    Object & Attr. 1 & Attr. 2 & Attr. 3 & Attr. 4 & Attr. 5 & Attr. 6 & Attr. 7
+    \\ \hline
+    Dog & 4 legs & 2 eyes & 50km/h speed & Fluffy Weapon & Can swim & Lives on Land & Mammal
+    \\ \hline
+    Cat & 4 legs & 2 eyes & 32km/h speed & Weapon & Can swim & Lives on Land & Mammal
+    \\ \hline
+    Salmon & 0 legs & 2 eyes & 32km/h speed & It's just a fish! & Can swim & Lives in Water & Just a Fish
+    \\ \hline
+\end{tabularx}
+
+...and many more objects. Note that "Attr." denotes attribute.
+
+\paragraph{Rules Base}
+
+\begin{itemize}
+    \item It is a collection of rules to analyze the knowledge base and to solve problems.
+    \item The inference engine uses it to make conclusions, which can then be used to solve problems or answer the user’s questions
+    \item The rules base contains logic that the inference engine uses to draw conclusions. E.g. IF moving = false AND breathing = false THEN status = “Dead”. Logical methods like these are then evaluated by the inference engine to evaluate if status = “Dead” or “Alive”
+\end{itemize}
+
+\paragraph{Inference Engine}
+
+\begin{itemize}
+    \item It is the main, problem-solving element of expert systems.
+    \item It uses the logic stored in the \emph{rules base} to identify and answer user queries with the most relevant info stored in the \emph{knowledge base}.
+    \item One may compare it as working like a search engine on the \emph{knowledge base}.
+    \item The inference engine tries to find the object in the knowledge base that best matches the user input, with the rules base being used to provide the search logic.
+\end{itemize}
+
+\paragraph{Explanation System}
+
+It is the part of the expert system that explains to the user the reasoning it generated, and draws conclusions/recommendations.
+
+\paragraph{Overall Structure}
+
+The user interface, explanation system and the inference engine are considered to be in the expert system shell, since it is the layer that handles interaction between the user and the data. The knowledge base and the rules base do not handle any part of the interaction, but is used by the inference engine as it handles the user interaction. The flow of data generally follows: Input screen → Expert system → Output Screen.
+
+For the expert system to find the object from the above table that a user is interested in, it could ask questions on almost every attribute. Though, with repeating values in certain rows, we can optimize the number of questions we ask the user. Attribute 2 — the number of eyes – stays the same for all the rows in our table. So the questions may be the type of creature (Mammal or fish), and if it can swim. Extra questions may be added to aid the user if they know different information about the object, such as the speed or if it "is a fluffy weapon". This is done to allow multiple paths to reach to a conclusion. (Accessibility purposes)
+
+\paragraph{Setting up Expert Systems}
+
+\begin{itemize}
+    \item Information is gathered through human sources or written sources such as textbooks, research papers or the internet
+    \item The above information fills the knowledge base in the object-attribute format
+    \item A rules base needs to be created to analyze user queries against the knowledge base
+    \item User interface needs to be developed to allow the user and expert system to communicate
+    \item Once set up, it needs to be fully tested by running the system with fully known outcomes, so results can be compared and changes made to the expert system.
+\end{itemize}
+
+\subsection{Machine Learning}
+\label{6:sec:ml}
+
+Machine learning is another type of AI, similar to expert systems, in that it is \emph{a technique for machines to replicate human behavior}. Unlike expert systems, which uses relatively simple conditionals to make decisions based on a small database, machine learning develops a \emph{neural network}. It is done by feeding the training program a lot of data and letting the computer categorize things based on patterns.
+
+This is like letting the computer train from past experiences in order to predict certain future events and to take decisions from previous scenarios. Due to a neural network being built that contains all this data stored logically, they respond quickly and are quite efficient when trained. 
+ 
+\textbf{Here’s an example from the textbook:} Consider a search engine, like Google. This is how your typical searches go:
+
+\begin{enumerate}
+    \item Open your search engine and enter your search term
+    \item Search engine presents you with multiple pages of information
+    \item You look through the options on the first page, and when you reach the end, you go to the second one, so on.
+\end{enumerate}
+
+However, these pages may not be presented in \emph{the most efficient way}, they may just be a random assortment of links. However, we can use machine learnin g here.
+
+We could build a neural network to recognize the relationship between a search term and search results. Given a completely random set of results; the URL that the user chooses to visit can be stored along with the search term, creating a correlation that this search term is related to this URL more \textbf{strongly than others}. Here’s an example case:
+
+\begin{enumerate}
+    \item User wants to know about dog toys and therefore searches “top 10 dog toys”.
+    \item The newly-built search engine presents all the articles it sees fit, in the order it best sees fit.
+    \item When the user clicks an article, like “The Best Dog Toys for Adult Dogs!”, the search engine will correlate that search term, “top 10 dog toys”, with the article, like “The Best Dog Toys for Adult Dogs”. It will create a link between the articles with a \textbf{weight}, basically dictating how strong the correlation is.
+    \item As more and more people search for dog toys and choose the articles they are interested in, the data on correlation between search terms and articles will get more accurate and broad. These weights are reinforced, naturally placing the most relevant article (largest weight) as the first option.
+\end{enumerate}
+
+\textbf{Extra Information:} This is a form of \emph{reinforcement learning}, where the search engine learns from user activity by clicking websites. Each time the user clicks an article, the model correlates the article and the term closer, almost like a reward for the computer as it knows the correlation further. \textbf{You will not need to know the different types of ML yet.}\footnote{New for 2027 batch IB CS kids: well ML is a topic in IB CS now :P}
 
 \end{document}

@@ -3,6 +3,54 @@
 
 \begin{document}
 
+In call cases, automated systems can help the vast majority of people in these industries speed up boring and repetitive tasks. More info can be found in the textbook (pages 218~229 all contain examples).
 
+\subsection{Applications of Robotics}
+
+Robots can be found in a few industries (some taken from textbook). Please do not worry about memorizing all of them, The syllabus simply requires you all to know that robots could be applied in these areas, not know the exact details. They are provided for further information/higher mark questions that require elaboration.
+
+\begin{itemize}
+    \item Industrial Purposes, like putting together parts of a car or managing warehouse stock, or labelling plastic bottles.
+    \item In the home, like roombas.
+    \item Military, like drones that can detect enemy planes
+    \item Transportation, like autonomous vehicles, or e-concierges
+    \item Agriculture, to harvest crops and so on
+    \item Medicine, like surgery robots
+\end{itemize}
+
+\subsection{Characteristics}
+
+\begin{itemize}
+    \item They can \textbf{sense their surroundings}: 
+        \begin{itemize}
+            \item Sensors (see section \ref{3:sec:sensors}) are used for this.
+            \item These sensors lets robots detect things about their environment. It helps them detect things like the shapes and sizes of objects, their masses, how far away they are, how hot/cold they are, what shape they are, etc.
+        \end{itemize}
+    \item They \textbf{have moving components}:
+        \begin{itemize}
+            \item Robots are typically used to automate repetitive tasks.
+            \item Since these repetitive tasks may contain picking things up and/or moving these things around, things such as solenoids, hydraulic pumps and systems, motors, wheels, cogs, etc. to help these computerized parts move.
+            \item (Taken from textbook) They can have  different attachments to help them carry out specific tasks, such as welding, spraying, cutting, lifting, among others.
+        \end{itemize}
+    \item They \textbf{can be programmed}:
+        \begin{itemize}
+            \item With code written in a programming language, a device known as a \emph{microcontroller} can be controlled. Nowadays, a project called MicroPython allows the simple and versatile Python programming language to be on these microcontrollers. 
+            \item These microcontrollers typically have general-purpose IO pins, or GPIO pins\footnote{Not necessarily needed for your exam.}. They typically contain serial interfaces or PWM\footnote{Pulse-width Modulation. Not necessarily required for the exam itself.}\footnote{This allows components, such as bulbs or motors, to change their intensity by varying the overall voltage they receive. This technology involves quickly turning on and off a steady supply of voltage to change the overall amount of voltage it receives.} interfaces which can be controlled by Python code that directly talk to the components, such as robotic arms or motors, to do real world tasks.
+All microcontrollers have a microprocessor, which is a type of integrated circuit on a single chip.
+        \end{itemize}
+\end{itemize}
+
+\subsection{Important Notes}
+
+(Headings are taken directly from the textbook).
+
+\begin{itemize}
+    \item Robots and AI  are not the same thing!  AI tends to possess more human-like intelligence features, however robots do not strictly include them. However, AI systems may be used to control a robot, in some cases.
+    \item Do not confuse software robots and hardware robots! Hardware robots have things like pistons, solenoids, motors, gears, etc. and interact with the physical world through a microcontroller of some sort. A software robot can also be a thing that does a repetitive task, but it does not interact with the physical world, however more the online world. Software robots may include (Examples from textbook):
+        \begin{itemize}
+            \item Web Crawlers, or as the textbook states; WebCrawlers, which automatically “surfs” the internet and collects information about web pages.
+            \item Chatbots, which seem to have a human-like conversation with you. However, they have mostly been phased out by LLMs, see section \ref{6:sec:ai}.
+        \end{itemize}
+\end{itemize}
 
 \end{document}
