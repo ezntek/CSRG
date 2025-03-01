@@ -5,10 +5,18 @@
 
 Userspace software differs from the software mentioned in section \ref{4:sec:the_os_and_kernel}. Cambridge refers to this simply as application software, but the real distinction comes from \emph{whether the program has direct access to physical memory and devices, or if the program must run through virtual memory and device drivers.}
 
-Examples of Application Software\footnote{counts as userspace software!} include:
+Examples of Application Software\footnote{counts as userspace software!} include and are not limited to:
 
 \begin{itemize}
-    \item 
+    \item \textbf{Word processors}, like Microsoft Word or Google Docs
+    \item \textbf{Spreadsheet software}, like Google Sheets or Excel
+    \item \textbf{Web browsers}, like Firefox and Chrome
+    \item \textbf{Control and Measuring software}, which connects to scientific instruments, sensors and such to measure physical quantities in the real world, and controls embedded systems.
+    \item \textbf{Multimedia Apps}, like video and audio players such as VLC
+    \item \textbf{Photo and Video editors}, like Adobe Photoshop, Premiere, or others like GIMP and DaVinci Resolve
+    \item \textbf{Graphics Manipulation Software} is mentioned in the textbook, but is identical to a Photo Editor. They edit photos (raster/bitmap images). There is also software to edit vector images.
 \end{itemize}
+
+\textit{Extra: The more technical definition of userspace software is that userspace software does not have direct access to memory and I/O. Kernel-space software can make use of the Von Neumann architecture directly; i.e. directly place things on buses, read and write to physical memory, and access I/O. Userspace software must access memory via virtual memory, and I/O through device drivers. This means that a lot of system software is actually userspace.}
 
 \end{document}

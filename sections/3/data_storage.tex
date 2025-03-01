@@ -135,9 +135,11 @@ A diagram illustrates this:
     \label{fig:virtmem}
 \end{figure}
 
+For a better explanation, head to section \ref{4:sec:virtmem}.
+
 Each program gets its own slice of the virtual memory, so that memory regions do not accidentially overlap, causing unintended errors. This is also partly for security, so that malicious programs cannot read, say, the passwords in your browser. It is important to note that slices of virtual memory are not all of uniform size. Each slice's location in actual physical memory and in swap may be different.
 
-The process of putting something explicitly into swap memory is called \textbf{paging in}, given one of those chunks in figure \ref{fig:virtmem} is called a page. Moving something out is called \textbf{paging out}.
+The process of putting something explicitly into swap memory is called \textbf{paging in}, given one of those chunks in figure \ref{fig:virtmem} is called a page. Moving something out is called \textbf{paging out}. Each slice of memory in the diagram (each block) is called a \textbf{page}. They are all equally sized.
 
 \subsection{HDDs (Hard disk drives)}
 
