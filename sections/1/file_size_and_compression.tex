@@ -1,0 +1,105 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+
+\begin{document}
+
+\subsection{File Size Units}
+
+The smallest unit of size in Computer Science is a \textbf{bit} (binary digit), and it is either a 1 or a 0. A byte is 8 bits, and a nibble is 4 (one hexadecimal digit). The table below introduces to you the rest of the units you need to know.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Number of Bytes} & \textbf{Unit}
+        \\ \hline
+        1000 & Kilobyte (KB)
+        \\ \hline
+        1,000,000 & Megabyte (MB)
+        \\ \hline
+        1,000,000,000 & Gigabyte (GB)
+        \\ \hline
+        1,000,000,000,000 & Terabyte (TB)
+        \\ \hline
+        1,000,000,000,000,000 & Petabyte (PB)
+        \\ \hline
+    \end{tabular}
+    \caption{SI Base-10 based file size units}
+    \label{tab:base10_units}
+\end{table}
+
+Table \ref{tab:base10_units} shows the different units if going in increments of 1000. This is based on base-10 and is easier for humans to understand. However, since computers operate in base-2, it makes much more sense for them to go in increments of 1024, like so.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Number of Bytes} & \textbf{Unit} 
+        \\ \hline
+        1024 ($2^{10}$) & Kibibyte (KiB)
+        \\ \hline
+        1,048,576 ($2^{20}$) & Mebibyte (MiB)
+        \\ \hline
+        1,073,741,824 ($2^{30}$) & Gibibyte (GiB)
+        \\ \hline
+        1,099,511,627,776 ($2^{40}$) & Tebibyte (TiB)
+        \\ \hline
+        1,125,899,906,842,624 ($2^{50}$) & Pebibyte (PiB)
+        \\ \hline
+    \end{tabular}
+    \caption{SI Base-10 based file size units}
+    \label{tab:computer_units}
+\end{table}
+
+This means that data can be represented in ($2^{10}$), ($2^{20}$), etc. which is more accurate, as devices measure memory in powers of 2, as they store binary bytes and not decimal 10s. This means that 1 Terabyte is only \textasciitilde931 Gibibytes.
+
+\subsection{Compression}
+
+There are 2 main types of compression.
+
+\paragraph{Lossy}
+
+This means that unnecessary data is eliminated from the file to reduce its size. Examples include:
+
+\begin{itemize}
+    \item \textbf{JPEG}, which throws away some data (image quality/sharpness) to reduce file size. This may change the bit depth, etc.
+    \item \textbf{MP3/MP4}, which are audio and video formats respectively that may throw away sampling rate, resolution and image quality for a video to save on file size. 
+\end{itemize}
+
+\paragraph{Lossless (Run-length Encoding)}
+
+This means that no data is discarded to reduce the file size. RLE is a method in the syllabus you must know that collapses repeating sequences of the same data into one chunk of data. Consider the string {\ccmono aaaaabbbccdddd}. Instead of storing it directly as their ASCII values, we can store
+
+{\centering\ccmono
+    05 97 03 98 02 99 04 100
+\medskip}
+
+as there are 5 ASCII code 97s, 3 98s, 2 99s, and 4 100s, that correspond to 5×a, 3×b, 2×c, and 4×d. One can even compress images with this method. Consider figure \ref{fig:8x8image}. Its binary representation is shown here (1 is now black, and 0 is now white):
+
+{\ccmono
+    1 1 1 1 1 1 1 1\\
+    1 0 0 0 0 0 0 1\\
+    1 0 1 1 1 1 0 1\\
+    1 0 1 0 0 1 0 1\\
+    1 0 1 0 0 1 0 1\\
+    1 0 1 1 1 1 0 1\\
+    1 0 0 0 0 0 0 1\\
+    1 1 1 1 1 1 1 1\\
+\medskip}
+
+We can represent this in RLE format as:
+
+{\ccmono
+    81\\
+    11 60 11\\
+    11 10 41 10 11\\
+    11 10 11 20 11 10 11\\
+    11 10 11 20 11 10 11\\
+    11 10 41 10 11\\
+    11 60 11\\
+    81\\
+\medskip}
+
+which represents the same data, but now compressed (note that {\ccmono 81} means 8 1's). This also goes for colors, just substitute the different colors for numerical/binary values. Refer to page 37 in the textbook for more examples.
+
+\end{document}
