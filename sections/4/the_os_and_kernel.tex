@@ -125,7 +125,7 @@ This mechanism of dynamically adding/removing space for programs means that phys
     \centering
     \includegraphics[width=0.8\textwidth]{memmap.png}
     \caption{Memory mapping.}
-    \caption{fig:memmap}
+    \label{fig:memmap}
 \end{figure}
 
 NOTE: each chunk of memory is called a \textbf{page}. Each page is the same size as another.
@@ -157,11 +157,53 @@ For more examples, refer to page 158 of the textbook.
 
 \subsubsection{User Accounts and Permissions}
 
-stub
+User accounts are a concept you should be familiar with. Accounts on a computer are not dissimilar from accounts on, say, Google; different users have different usernames and passwords on a computer system. This is useful for identifying different people, separating different users' data, and permissions management.
+
+The OS manages all user accounts and sets up techniques to manage passwords and personal folders (home folders, what stores the desktop, documents, etc.) and manages who can access it. The OS creates different levels of privelege by segregating different users and granting them the ability to do different tasks based on their usernames and the user groups they are placed in. Some will have the privelege to write to the whole startup disk, while others only have privelege to write to their own home folder. Some will also have administrator priveleges while others will not.
+
+This is not dissmilar to classroom management systems like the one at our school; teachers can create and set homework while we can only read them.
 
 \subsubsection{Human-Computer Interfaces (HCI)}
 
-stub
+HCI's allow the user to interact with the computer through an interface. There are 2 types of interfaces used in the modern day, \textbf{Command-line Interfaces (CLI)} and \textbf{Graphical User Interfaces (GUI)}. They allow the user to perform tasks the operating system is capable of doing (everything mentioned above), like launching programs, managing files and users. 
+
+\paragraph{GUIs}
+
+GUIs, or Graphical User Interfaces is the most common type of HCI out there.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{macos11_desktop.png}
+    \caption{The desktop of macOS 11 "Big Sur".}
+    \label{fig:macos11:desktop}
+\end{figure}
+
+They usually use a group of technology called WIMP (Windows, Icons, Menus and Pointer) which includes all the elements mentioned previously to give you an interface with menus, windows, icons and a pointing device to navigate them. This was developed for use on personal computers (its origins are disputed) by several companies separately.
+
+There are also post-WIMP interactions. This is used on both phones, tablets and some laptops with touchscreens here instead of using a pointer, the device uses less menus and more icons, buttons and gestures powered by the touchscreen to let the user navigate it. Both iOS and Android uses these. The most notable desktop OS that does not have post-WIMP interactions is macOS.
+
+\paragraph{CLIs}
+
+CLIs, or command line interfaces was the most prevalant HCI before GUIs were idealized. Even now, there are operating systems (Linux and BSDs) that allow the user to skip the WIMP stack and directly perform all tasks with a CLI.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{cli.png}
+    \caption{Linux in tty mode, meaning there is no GUI.}
+    \label{fig:cli}
+\end{figure}
+
+CLIs, instead of GUIs do not make use of the mouse pointer, and there are no graphics, like windows and icons. Instead, you type comands into a \textbf{console} or \textbf{terminal} that perform very specific tasks, like making a directory with permissions or opening a text file and editing it.
+
+Power users and programmers like you use CLIs, as you can directly communicate with the computer and operating system without needing to dig for menus here and there and constantly using the mouse to perform basic tasks. Instead, you only use the keyboard and type in the exact commands to do the exact things you must do all at once. CLIs also lets you automate complex tasks in the form of scripts, which run many commands one after another. You can use a \textbf{Terminal Emulator} to emulate a full CLI inside a window, like so:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{terminal_emulator.png}
+    \caption{A terminal emulator on Linux, which allows one to emulate a full terminal in a GUI.}
+    \label{fig:terminal_emulator}
+\end{figure}
 
 \subsection{System Software}
 
