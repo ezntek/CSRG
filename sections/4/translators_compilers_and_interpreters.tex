@@ -3,6 +3,135 @@
 
 \begin{document}
 
+Translators (dissmilar to Google Translate or DeepL) translates programming languages into different programming languages. All of this is done so that at one point, code that you write can be translated into the raw instructions that your CPU understands, known as \textbf{machine code}. There are 3 main types of translators that you must be aware of for your final exam.
 
+\subsection{High-level and Low-level languages}
+
+High level (HLLs) and Low level languages (LLLs) are categories used to describe the amount of control the programmer has over the CPU.
+
+\paragraph{High-level languages}
+
+HLLs allows the programmer to focus on the problem itself, without the prgorammer needing to know anything about the CPU the code will be ran on. They are designed with programmers in mind; they provide human-like features like if statements, loops, procedures and other things a human would find natural to have when giving a machine instructions. 
+
+\begin{itemize}
+    \item Read and understand the code better, as it is closer to English
+    \item Write code faster
+    \item Debug faster
+    \item Less maintenance when the code is deployed.
+\end{itemize}
+
+Prominent HLLs include \textbf{Python, Java, Go, Rust, JavaScript}. Disputed ones include C, C++ and Rust.
+
+\paragraph{Low-level languages}
+
+These languages give programmers more control over the CPU and the memory that is being manipulated in the program. To use these languages, you at least need to know how memory works, and sometimes how the CPU executes code. Prominent examples include \textbf{Assembly Language, Machine Code} and disputed ones include C, C++ and Rust\footnote{They are disputed because you don't really need to know how the underlying CPU works and the native assembly it takes, but you do need to know exactly how RAM and manual memory management works}.
+
+Some features include:
+
+\begin{itemize}
+    \item Programs run much faster, as they are closer to the native CPU
+    \item Programming takes longer
+    \item One must worry both about the problem at hand and the CPU used to run it
+    \item Debugging is slower, as the code is more complex
+    \item More maintenance as bugs are harder to spot
+\end{itemize}
+
+\subsection{Types of translators}
+
+\paragraph{Assemblers}
+
+Assemblers are the most simple type of translator. They take assembly language, like so:
+
+\begin{minted}{asm}
+.data
+txt:
+    .ascii "hello, world!\n"
+
+.text
+.global _start
+_start:
+    mov x8, #64
+    mov x0, #1
+    ldr x1, =txt
+    mov x2, 14
+    svc #0
+    mov x8, #93
+    mov x0, xzr
+    svc #0
+\end{minted}
+
+and translates it into machine code that can be used in the fetch-decode-execute cycle, all at one time. Machine code is represented entirly in hexadecimal, like so:
+
+\begin{minted}{text}
+00000000: 0808 80d2 2000 80d2 c100 0058 c201 80d2  .... ......X....
+00000010: 0100 00d4 a80b 80d2 e003 1faa 0100 00d4  ................
+00000020: 0000 0000 0000 0000                      ........
+\end{minted}
+
+(output from the {\ccmono xxd} utility)
+
+However, hexadecimal is hard to read, so programmers programming directly for the CPU use assembly. They can manipulate the fetch-decode-execute cycle directly and do exact things with the CPU, while writing in a better language than straight-up binary/hexadecimal.
+
+\textbf{An Executable} is defined as any piece of machine code that can be run in the fetch-decode-execute cycle.
+
+\paragraph{Compilers}
+
+Compilers are similar to assemblers, in that they translate things all at once. Compilers take \textbf{source code}, which is the code you write, and it converts it into executable machine code. They translate all the code at once. Source code is also sometimes called a translation unit. A prominent compiled language is C, here is a C program that does the same thing as the assembly given above (prints "hello world"):
+
+\begin{minted}{c}
+#include <stdio.h>
+
+int main(void) {
+    printf("hello, world!\n");
+    return 0;
+}
+\end{minted}
+
+This will translate into machine code that can be used in the fetch-decode-execute cycle. Compilers are typically used by low-level languages. However, languages like Go have a compiler, and Go is high-level. Compilers are programs in themselves.
+
+Advantages include:
+
+\begin{itemize}
+    \item They generate code that runs much faster.
+    \item All errors are reported all at once.
+    \item Compiled programs take up less space in memory.
+    \item Compiled programs do not require an interpreter to run them.
+\end{itemize}
+
+Disadvantages include:
+
+\begin{itemize}
+    \item Compiling large projects takes a very long time.
+    \item Writing, testing and debugging programs written in a compiled language is harder and takes more time. It typically requires special tools like debuggers and address sanitizers.
+\end{itemize}
+
+\paragraph{Interpreters}
+
+Interpreters are unlike Compilers, as Compilers translate the whole piece of code all at once and emits all errors all at once. Interpreters, on the other hand, runs the code on a line-by-line basis\footnote{This is technically untrue, but all you must know is that this is true.}, and only emits an error when it hits a line that has it. It does not tell you about all the errors in the file all at once.
+
+Python is a prominent interpreted programming language, here is a Python program that does the same thing as the C program above:
+
+\begin{minted}{python}
+print("hello, world!")
+\end{minted}
+
+Interpreters are usually only used for HLLs, as you do not have to directly manage memory. Interpreters are also programs in themselves. The program, therefore, can simply do all the memory for the HLL, so the source code the interpreter reads does not have to manage its memory.
+
+Advantages include:
+
+\begin{itemize}
+    \item They are easier to write, test and debug.
+    \item They are simpler to run.
+    \item Maintenance is easy, as there are typically fewer bugs produced in interpreted languages.
+\end{itemize}
+
+Disadvantages include:
+
+\begin{itemize}
+    \item They are slower than compiled languages.
+    \item They take up more space on disk and more memory, as one must also store the interpreter somewhere.
+    \item Programs cannot be run without the interpreter.
+    \item Errors are reported gradually as the program runs.
+\end{itemize}
 
 \end{document}

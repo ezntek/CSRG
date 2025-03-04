@@ -3,8 +3,16 @@
 
 \begin{document}
 
-\paragraph{Stub}
+System startup is defined as the process the computer takes from being complteely shut off (no current passing through the CPU) to running the operating system, able to execute multiple processes. The process by which this happens is:
 
-stub
+\begin{itemize}
+    \item \textbf{The BIOS} is loaded into RAM. This is stored on a small ROM (EEPROM) chip on the motherboard, and it contains important code that performs hardware initialization. This means that all the hardware connected to the I/O controller, like all the ports, the display, keyboard, mouse and even RAM is initialized and acknowledged.
+    \item \textbf{The BIOS loads the boostrap loader/bootloader.} The BIOS is able to locate the operating system on disk as it just initialized it, it loads the first few sections of it, which contains the \emph{kernel}\footnote{For a discussion on the kernel, see section \ref{4:sec:the_os_and_kernel}. The kernel is the very core of the OS and handles all the system-related tasks the OS does, like peripheral management, filesystem, virtual memory, and multitasking}.
+    \item The rest of the OS starts up, along with userspace software. See section \ref{4:sec:userspace_software} for a discussion. After the core of the OS is loaded into RAM, it re-initializes the hardware by loading more advance device drivers. It then starts up whatever system services that must be ran, and then ar GUI interface.
+\end{itemize}
+
+The BIOS is also called \textbf{the firmware}, which is defined as a program that provides low level control for devices.
+
+The BIOS is stored in a special type of ROM that can be reprogrammed, so that it can be updated if it must be but in normal circumstances is read-only. It is usually only \textasciitilde16MiB.
 
 \end{document}
