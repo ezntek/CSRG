@@ -3,6 +3,61 @@
 
 \begin{document}
 
-stub
+The internet is one of the most influential creations of society. It has impacted all of us in some way. This section will focus on it. The internet at its core is just a bunch of computers connected together over a very large wide-area network (WAN), hence the words INTERconnected NETwork.
+
+\subsection{The Internet vs the Worldwide Web (WWW)}
+
+Internets come from the words Interconnected Network; they are literally just computers connected together that can share data amongst themselves. If I took 5 laptops and connected each of them to each other, that would technically be an internet. The internet has some protocols (rules) that are defined for computers to communicate in a uniform way.
+
+\begin{itemize}
+    \item The internet that we know of is the largest collection of computers that are connected together. They consist of servers, which provide the websites and services, and they are all connected to each other in some way.
+    \item The internet is more of a concept that a tangible thing; the servers that you can touch are just computers. The connection between the servers is what the internet really is. However, \textbf{it still relies on a physical infrastructure}
+\end{itemize}
+
+The World Wide Web (or WWW) is just a part of the internet that we can access. The world wide web consist of the things that sit on top of the internet, all the web pages and services like Google, YouTube, Discord, Reddit, Instagram, etc. are a part of the WWW. The WWW also provides extra protocols on top of the internet's protocols that relate to the content on the WWW, like how websites should be written, encryption, etc.
+
+In summary, the internet are the connections between physical infrastructure that provide the technology for computers to communicate, and the WWW are the webppages, content and protocols that sits on top of the internet's protocols.
+
+\subsection{URLs (Uniform Resource Locators)}
+
+Web browsers, or just browsers allows you to view content on the WWW. Browsers interpret HTML\textbf{Hypertext Markup Langauge}, which is a specific programming language that defines the basic component and the text in a webpage, think the bricks in your house. To access these files, the browser must visit a URL, which locates a location on the WWW. They look as follows:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{url.png}
+    \caption{The parts of a URL}
+    \label{fig:url}
+\end{figure}
+
+The \textcolor{red}{protocol} is typically either {\ccmono http} or {\ccmono https}.
+
+The \textcolor{blue}{domain} (or web address) is the website's name, like {\ccmono google.com}. 
+\begin{itemize}
+    \item The domain host (or the subdomain) is what goes before the website's name, like {\ccmono images.} in {\ccmono images.google.com}.
+    \item The domain name, which is {\ccmono google}.
+    \item The domain suffix/domain type, which contains {\ccmono .com}, {\ccmono .net}, etc. Sometimes it is a country code, like {\ccmono .uk}, {\ccmono .us} or {\ccmono .cn}, for example.
+\end{itemize}
+
+The \textcolor{green}{path} are like the directions leading up to the file that is to be loaded. Here, it is just one thing, but you can have something like:
+
+{\ccmono https://www.cambridgeinternational.org/why-choose-us/benefits-of-a-cambridge-education/}
+
+where the path is 2 parts, {\ccmono why-choose-us} and {\ccmono benefits-of-a-cambridge-education}. You can also think of it like sections leading up to a paragraph in a textbook. 
+
+The \textcolor{yellow}{file} is the document or the actual data for the browser to load. It can be an html file or something else, you will see suffixes like {\ccmono .jsp} and {\ccmono .aspx}. It is a lot like files on your hard drive.
+
+\subsection{HTTP and HTTPS}
+
+HTTP, or the hypertext transfer protocol, is a set of rules that defines how data should be sent over the internet. It determines how data should be sent between a client (somebody visiting the server), and a server. It includes details like error checking and how clients/servers should respond to each others' requests. It is then up to web browsers and web server software\footnote{software that provides the actual website and the HTML behind it to the client.} to comply with HTTP for it to be compatible with existing infrastructure.
+
+HTTPS is like HTTP, but uses TLS (Transport Layer Security) or SSL (Secure Socket Layer)\footnote{All TLS-compatible software are compatible with SSL, as TLS was designed to be compatible with SSL} to communicate. This means that instead of sending the raw bytes of the HTTP request, containing potentially sensitive information, it is encrypted so that onlookers cannot modify or read the data. the S in HTTPS means its secure.
+
+\subsection{Web browsers}
+
+These are programs that are capable of reading HTML files, displaying website layouts, playing sound, video and viewing PDFs, among others. They have the ability to connect to the internet and allows the user to freely access the worldwide web.
+
+\subsection{Loading Website Data}
+
+\subsection{Cookies}
 
 \end{document}

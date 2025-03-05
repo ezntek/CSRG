@@ -143,6 +143,12 @@ File management in general is a complex topic, and due to time constraints it ca
     \item The operating system reads these files from the filesystem into memory for operation.
 \end{enumerate}
 
+\subsubsection{What is a file, exactly?}
+
+This is actually something that comes up in exams quite a bit. After reading the previous section, you know that files don't exist on hardware, it is defined by software; the filesystem you use, the system by which you store files.
+
+Files are distinct pieces of data that usually exist on secondary storage with a name, and sometimes a file extension. On the device itself, it exists in some location, and that location along with its file name is located in the filesystem header (in many cases, the \textbf{file allocation table}). This means that under the hood, files have 2 parts.
+
 \subsubsection{Hardware Peripheral Management}
 
 The operating system interacts with hardware devices. In summary:
