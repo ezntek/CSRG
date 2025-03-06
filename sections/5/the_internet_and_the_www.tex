@@ -54,10 +54,93 @@ HTTPS is like HTTP, but uses TLS (Transport Layer Security) or SSL (Secure Socke
 
 \subsection{Web browsers}
 
-These are programs that are capable of reading HTML files, displaying website layouts, playing sound, video and viewing PDFs, among others. They have the ability to connect to the internet and allows the user to freely access the worldwide web.
+These are programs that are capable of reading HTML files, displaying website layouts, playing sound, video and viewing PDFs, among others. They have the ability to connect to the internet and allows the user to freely access the worldwide web. You are likely using one right now; Google Chrome and Mozilla Firefox are very popular ones.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{firefox.png}
+    \caption{A screenshot of the homescreen of the Firefox Browser.}
+    \label{fig:firefox}
+\end{figure}
+
+They do several things:
+
+\begin{itemize}
+    \item Loads webpages at URLs.
+    \item Keeps a history of all the website the user visited.
+    \item They allow the user to navigate forward and backward.
+    \item They make use of cookies.
+    \item They support hyperlinks, which are links to other webpages/locations on the document.
+    \item Data is stored inside of a cache.
+\end{itemize}
+
+and more.
 
 \subsection{Loading Website Data}
 
+In order to load HTML data from servers, it must find the IP address of the server first. However, website names are typed into the browser in their domain form, and not the IP address form. It must go through a \textbf{DNS} (Domain Name Server) first, which is (essentially) a large lookup table between domains and IP addresses. The typical procedure for your computer to load data from a server looks as follows:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{dns.png}
+    \caption{How a DNS works.}
+    \label{fig:dns}
+\end{figure}
+
+\begin{enumerate}
+    \item \textcolor{red}{Your computer requests the DNS for the IP address of the URL, in this case Google.com.}
+    \item \textcolor{green}{The DNS may communicate with other nearby DNSes, and returns to the computer the IP address that your computer needs to load the resource.}
+    \item \textcolor{blue}{Your computer then requests that webpage from the server, in this case Google.}
+    \item \textcolor{yellow}{The server then responds with the corresponding data.}
+\end{enumerate}
+
 \subsection{Cookies}
+
+These are like blobs used to store tempoary, small bits of information that relate to a website and its features.
+
+In summary, cookies:
+
+\begin{itemize}
+    \item Allows websites to remember user data, including emails and payment information, so that they don't have to reinsert it into the website every time it's needed.
+    \item Are used as memory for webpages, like a webpage's memory on the user's computer used all for itself.
+    \item Can track internet habits and web histories, along with other personal information.
+    \item Can be used in targeted advertising.
+    \item Stores user preferences (like dark mode, etc.)
+\end{itemize}
+
+There are 2 main kinds of cookies, and they are as follows:
+
+\paragraph{Session Cookies}
+
+These are the most common type of cookie. These don't have an expiry date attached to it, and they are stored in RAM a not to the disk. Hence, they only exist when the browser ies left open.
+
+An example of session cookies use would be the shopping basket on a shopping site like Lazada. When you add items to the cart, it stores the contents of the cart in a cookie, so that when you relaod the page or visit other items, the cart is not emptied. They do not actually collect any information about the computer and do not identify the user.
+
+\paragraph{Persistent Cookies}
+
+Unlike session cookies, these persist by being stored on disk. These are usually used to store website settings, like making ChatGPT stay in dark mode. These cookies have an expiry date. When the expiry date of a persistent cookie is reached, or if the user deletes it, only then is it cleared.
+
+These are used for:
+
+\begin{itemize}
+    \item Saving personal information, like credit cards
+    \item Tracking your preferences on websites
+    \item Storing login details
+\end{itemize}
+
+And others. Persistent cookies allows the web server to not store as much data as they usually would need to, as things like login details can be stored on the user's computer and can be loaded every time the site is visited.
+
+Since these remain on disk, they can be used to \textbf{target users} by sending these cookies to other websites for advertising. They can also track your browser history and other personal data. Hackers can target persistent cookies on disk to breach your data, as well.
+
+\paragraph{Loading Cookies}
+
+\begin{enumerate}
+    \item Every time a page is loaded by your web browser, it looks for any cookies.
+    \item When it finds cookies, it loads both the persistent cookies stored on disk and session cookies which are stored in RAM (tempoary).
+    \item When the website is closed, the persistent cookie is backed up on secondary storage.
+    \item When the web browser itself is closed, the session cookies are deleted from memory.
+\end{enumerate}
+
+For more details, see page 185 of the textbook.
 
 \end{document}
