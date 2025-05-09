@@ -1,0 +1,560 @@
+File: ./main.tex
+Encoding: utf8
+Words in text: 0
+Words in headers: 21
+Words outside text (captions, etc.): 0
+Number of headers: 8
+Number of floats/tables/figures: 0
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  0+7+0 (1/0/0/0) _top_
+  0+1+0 (1/0/0/0) Chapter: Introduction
+  0+2+0 (1/0/0/0) Chapter: Data Representation
+  0+2+0 (1/0/0/0) Chapter: Data Transmission
+  0+1+0 (1/0/0/0) Chapter: Hardware
+  0+1+0 (1/0/0/0) Chapter: Software
+  0+5+0 (1/0/0/0) Chapter: The Internet and Its Uses
+  0+2+0 (1/0/0/0) Chapter: Emerging Technologies
+
+File: ./chapters/4_software.tex
+Encoding: ascii
+Words in text: 24
+Words in headers: 15
+Words outside text (captions, etc.): 0
+Number of headers: 5
+Number of floats/tables/figures: 0
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  6+5+0 (1/0/0/0) Section: The Operating System and Kernel
+  4+2+0 (1/0/0/0) Section: System Startup
+  4+2+0 (1/0/0/0) Section: Userspace Software
+  6+4+0 (1/0/0/0) Section: Translators, Compilers and Interpreters
+  4+2+0 (1/0/0/0) Section: Development Environments
+
+File: ./chapters/3_hardware.tex
+Encoding: ascii
+Words in text: 22
+Words in headers: 14
+Words outside text (captions, etc.): 0
+Number of headers: 5
+Number of floats/tables/figures: 0
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  4+2+0 (1/0/0/0) Section: Data Storage
+  4+4+0 (1/0/0/0) Section: The Von Neumann Architecture
+  6+4+0 (1/0/0/0) Section: Input and Output Devices
+  4+2+0 (1/0/0/0) Section: Network Hardware
+  4+2+0 (1/0/0/0) Section: Embedded Systems
+
+File: ./chapters/1_data_representation.tex
+Encoding: ascii
+Words in text: 40
+Words in headers: 11
+Words outside text (captions, etc.): 0
+Number of headers: 3
+Number of floats/tables/figures: 0
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  23+0+0 (0/0/0/0) _top_
+  5+3+0 (1/0/0/0) Section: Applications of Hexadecimal
+  6+4+0 (1/0/0/0) Section: Text, Sound and Images
+  6+4+0 (1/0/0/0) Section: File Size and Compression
+
+File: ./chapters/2_data_transmission.tex
+Encoding: ascii
+Words in text: 26
+Words in headers: 14
+Words outside text (captions, etc.): 0
+Number of headers: 6
+Number of floats/tables/figures: 0
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  6+4+0 (1/0/0/0) Section: Types of Data Transmission
+  3+1+0 (1/0/0/0) Section: USB
+  6+4+0 (1/0/0/0) Section: IP and MAC addresses
+  4+2+0 (1/0/0/0) Section: Packet Switching
+  4+2+0 (1/0/0/0) Section: Error Correction
+  3+1+0 (1/0/0/0) Section: Encryption
+
+File: ./chapters/5_the_internet_and_its_uses.tex
+Encoding: ascii
+Words in text: 14
+Words in headers: 10
+Words outside text (captions, etc.): 0
+Number of headers: 3
+Number of floats/tables/figures: 0
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  7+7+0 (1/0/0/0) Section: The Internet and the Worldwide Web (WWW)
+  4+2+0 (1/0/0/0) Section: Digital Currency
+  3+1+0 (1/0/0/0) Section: Cybersecurity
+
+File: ./chapters/introduction.tex
+Encoding: ascii
+Words in text: 13
+Words in headers: 9
+Words outside text (captions, etc.): 0
+Number of headers: 4
+Number of floats/tables/figures: 0
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  3+4+0 (1/0/0/0) Section: What is this guide?
+  3+2+0 (1/0/0/0) Section: License Notice
+  4+2+0 (1/0/0/0) Section: Important Information
+  3+1+0 (1/0/0/0) Section: Notes
+
+File: ./chapters/6_emerging_technologies.tex
+Encoding: ascii
+Words in text: 11
+Words in headers: 6
+Words outside text (captions, etc.): 0
+Number of headers: 3
+Number of floats/tables/figures: 0
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  4+2+0 (1/0/0/0) Section: Automated Systems
+  3+1+0 (1/0/0/0) Section: Robotics
+  4+3+0 (1/0/0/0) Section: Artificial Intelligence (AI)
+
+File: ./sections/3/data_storage.tex
+Encoding: ascii
+Words in text: 1922
+Words in headers: 48
+Words outside text (captions, etc.): 171
+Number of headers: 19
+Number of floats/tables/figures: 9
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  37+0+0 (0/0/0/0) _top_
+  117+4+0 (1/0/0/0) Subsection: Primary vs Secondary Storage
+  558+10+10 (4/1/0/0) Subsection: RAM
+  134+1+58 (1/0/0/0) Subsection: ROM
+  174+2+5 (1/1/0/0) Subsection: Virtual Memory
+  245+6+33 (3/2/0/0) Subsection: HDDs (Hard disk drives)
+  198+6+23 (3/1/0/0) Subsection: SSDs (Solid state drives)
+  80+5+4 (1/1/0/0) Subsection: USB Mass Storage (Flash Drives)
+  187+5+27 (1/1/0/0) Subsection: Optical Media (CDs, DVDs, BDs)
+  67+1+8 (1/1/0/0) Subsection: Barcodes
+  80+2+3 (1/1/0/0) Subsection: QR Codes
+  1+2+0 (1/0/0/0) Subsection: Cloud Storage
+  44+4+0 (1/0/0/0) Subsection: Medium vs. Storage Device
+
+File: ./sections/3/embedded_systems.tex
+Encoding: ascii
+Words in text: 347
+Words in headers: 2
+Words outside text (captions, etc.): 8
+Number of headers: 1
+Number of floats/tables/figures: 1
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  218+0+0 (0/0/0/0) _top_
+  129+2+8 (1/1/0/0) Subsection: Event Loops
+
+File: ./sections/3/von_neumann.tex
+Encoding: ascii
+Words in text: 1585
+Words in headers: 25
+Words outside text (captions, etc.): 122
+Number of headers: 12
+Number of floats/tables/figures: 5
+Number of math inlines: 2
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  55+0+9 (0/1/0/0) _top_
+  228+2+58 (1/2/1/0) Subsection: The CPU
+  512+8+33 (2/0/1/0) Subsection: The CU, ALU and Registers
+  72+1+0 (1/0/0/0) Subsection: Cache
+  239+1+4 (1/0/0/0) Subsection: Buses
+  169+6+0 (4/0/0/0) Subsection: The Fetch-Decode-Execute Cycle
+  103+3+8 (1/1/0/0) Subsection: The Clock Speed
+  128+1+10 (1/1/0/0) Subsection: Cores
+  79+3+0 (1/0/0/0) Subsection: Increasing CPU speed
+
+File: ./sections/3/input_and_output_devices.tex
+Encoding: ascii
+Words in text: 741
+Words in headers: 5
+Words outside text (captions, etc.): 18
+Number of headers: 3
+Number of floats/tables/figures: 0
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  305+2+0 (1/0/0/0) Subsection: Input Devices
+  255+2+18 (1/0/0/0) Subsection: Output Devices
+  181+1+0 (1/0/0/0) Subsection: Sensors
+
+File: ./sections/3/network_hardware.tex
+Encoding: ascii
+Words in text: 168
+Words in headers: 2
+Words outside text (captions, etc.): 20
+Number of headers: 2
+Number of floats/tables/figures: 2
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  80+1+8 (1/1/0/0) Subsection: NICs
+  88+1+12 (1/1/0/0) Subsection: Routers
+
+File: ./sections/5/digital_currency.tex
+Encoding: ascii
+Words in text: 587
+Words in headers: 8
+Words outside text (captions, etc.): 18
+Number of headers: 4
+Number of floats/tables/figures: 3
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  125+6+6 (2/1/0/0) Subsection: Digital Currencies
+  462+2+12 (2/2/0/0) Subsection: Cryptocurrencies
+
+File: ./sections/5/the_internet_and_the_www.tex
+Encoding: ascii
+Words in text: 1341
+Words in headers: 26
+Words outside text (captions, etc.): 51
+Number of headers: 9
+Number of floats/tables/figures: 3
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  51+0+0 (0/0/0/0) _top_
+  246+7+0 (1/0/0/0) Subsection: The Internet vs the Worldwide Web (WWW)
+  227+4+8 (1/1/0/0) Subsection: URLs (Uniform Resource Locators)
+  130+3+30 (1/0/0/0) Subsection: HTTP and HTTPS
+  110+2+9 (1/1/0/0) Subsection: Web browsers
+  138+3+4 (1/1/0/0) Subsection: Loading Website Data
+  439+7+0 (4/0/0/0) Subsection: Cookies
+
+
+!!! Reached end of file while waiting for \end. !!!
+
+!!! Environment ended while waiting for nd{document}. !!!
+File: ./sections/5/cybersecurity.tex
+Encoding: ascii
+Words in text: 1363
+Words in headers: 23
+Words outside text (captions, etc.): 33
+Number of headers: 14
+Number of floats/tables/figures: 0
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  63+0+0 (0/0/0/0) _top_
+  43+3+0 (1/0/0/0) Subsection: Brute Force Attacks
+  62+2+0 (1/0/0/0) Subsection: Data Interception
+  97+4+0 (1/0/0/0) Subsection: Distributed Denial-of-Service (DDoS) attacks
+  93+1+0 (1/0/0/0) Subsection: Hacking
+  553+9+33 (7/0/0/0) Subsection: Malware
+  144+1+0 (1/0/0/0) Subsection: Phishing
+  179+1+0 (1/0/0/0) Subsection: Pharming
+  129+2+0 (1/0/0/0) Subsection: Social engineering
+
+(errors:2)
+File: ./sections/introduction/license.tex
+Encoding: ascii
+Words in text: 193
+Words in headers: 0
+Words outside text (captions, etc.): 5
+Number of headers: 0
+Number of floats/tables/figures: 0
+Number of math inlines: 0
+Number of math displayed: 0
+
+File: ./sections/introduction/important_information.tex
+Encoding: ascii
+Words in text: 154
+Words in headers: 0
+Words outside text (captions, etc.): 0
+Number of headers: 0
+Number of floats/tables/figures: 0
+Number of math inlines: 0
+Number of math displayed: 0
+
+File: ./sections/introduction/whatisthisguide.tex
+Encoding: ascii
+Words in text: 440
+Words in headers: 6
+Words outside text (captions, etc.): 5
+Number of headers: 1
+Number of floats/tables/figures: 0
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  171+0+5 (0/0/0/0) _top_
+  269+6+0 (1/0/0/0) Section: Making the most of this guide
+
+File: ./sections/introduction/notes.tex
+Encoding: utf8
+Words in text: 210
+Words in headers: 0
+Words outside text (captions, etc.): 33
+Number of headers: 0
+Number of floats/tables/figures: 0
+Number of math inlines: 0
+Number of math displayed: 0
+
+File: ./sections/4/userspace_software.tex
+Encoding: ascii
+Words in text: 229
+Words in headers: 0
+Words outside text (captions, etc.): 4
+Number of headers: 0
+Number of floats/tables/figures: 0
+Number of math inlines: 0
+Number of math displayed: 0
+
+File: ./sections/4/the_os_and_kernel.tex
+Encoding: utf8
+Words in text: 2495
+Words in headers: 41
+Words outside text (captions, etc.): 104
+Number of headers: 18
+Number of floats/tables/figures: 5
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  56+0+11 (0/1/0/0) _top_
+  2269+39+93 (17/4/0/0) Subsection: The OS
+  170+2+0 (1/0/0/0) Subsection: System Software
+
+File: ./sections/4/system_startup.tex
+Encoding: ascii
+Words in text: 234
+Words in headers: 0
+Words outside text (captions, etc.): 34
+Number of headers: 0
+Number of floats/tables/figures: 0
+Number of math inlines: 0
+Number of math displayed: 0
+
+File: ./sections/4/translators_compilers_and_interpreters.tex
+Encoding: ascii
+Words in text: 838
+Words in headers: 14
+Words outside text (captions, etc.): 49
+Number of headers: 7
+Number of floats/tables/figures: 0
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  60+0+0 (0/0/0/0) _top_
+  224+8+35 (3/0/0/0) Subsection: High-level and Low-level languages
+  554+6+14 (4/0/0/0) Subsection: Types of translators
+
+File: ./sections/4/development_environments.tex
+Encoding: ascii
+Words in text: 191
+Words in headers: 8
+Words outside text (captions, etc.): 16
+Number of headers: 3
+Number of floats/tables/figures: 2
+Number of math inlines: 0
+Number of math displayed: 0
+
+File: ./sections/6/automated_systems.tex
+Encoding: utf8
+Words in text: 619
+Words in headers: 13
+Words outside text (captions, etc.): 98
+Number of headers: 4
+Number of floats/tables/figures: 0
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  334+4+98 (1/0/0/0) _top_
+  35+1+0 (1/0/0/0) Subsection: Applications
+  120+4+0 (1/0/0/0) Subsection: Advantages of Automated Systems
+  130+4+0 (1/0/0/0) Subsection: Disadvantages of Automated Systems
+
+File: ./sections/6/robotics.tex
+Encoding: utf8
+Words in text: 497
+Words in headers: 6
+Words outside text (captions, etc.): 56
+Number of headers: 3
+Number of floats/tables/figures: 0
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  35+0+0 (0/0/0/0) _top_
+  101+3+0 (1/0/0/0) Subsection: Applications of Robotics
+  214+1+56 (1/0/0/0) Subsection: Characteristics
+  147+2+0 (1/0/0/0) Subsection: Important Notes
+
+File: ./sections/6/artificial_intelligence.tex
+Encoding: utf8
+Words in text: 1700
+Words in headers: 21
+Words outside text (captions, etc.): 210
+Number of headers: 11
+Number of floats/tables/figures: 0
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  129+0+76 (0/0/0/0) _top_
+  143+1+0 (1/0/0/0) Subsection: Characteristics
+  174+1+71 (1/0/0/0) Subsection: Reasoning
+  101+1+46 (1/0/0/0) Subsection: Examples
+  693+16+0 (7/0/0/0) Subsection: Expert Systems
+  460+2+17 (1/0/0/0) Subsection: Machine Learning
+
+File: ./sections/1/applications_of_hexadecimal.tex
+Encoding: ascii
+Words in text: 205
+Words in headers: 15
+Words outside text (captions, etc.): 0
+Number of headers: 5
+Number of floats/tables/figures: 0
+Number of math inlines: 3
+Number of math displayed: 0
+
+File: ./sections/1/text_sound_and_images.tex
+Encoding: ascii
+Words in text: 1058
+Words in headers: 7
+Words outside text (captions, etc.): 81
+Number of headers: 3
+Number of floats/tables/figures: 7
+Number of math inlines: 3
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  201+5+11 (1/0/2/0) Subsection: Character Encoding: ASCII and Unicode
+  476+1+49 (1/4/1/0) Subsection: Sound
+  381+1+21 (1/3/0/0) Subsection: Images
+
+File: ./sections/1/file_size_and_compression.tex
+Encoding: utf8
+Words in text: 455
+Words in headers: 8
+Words outside text (captions, etc.): 12
+Number of headers: 4
+Number of floats/tables/figures: 2
+Number of math inlines: 2
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  133+3+12 (1/2/2/0) Subsection: File Size Units
+  322+5+0 (3/0/0/0) Subsection: Compression
+
+File: ./sections/2/encryption.tex
+Encoding: ascii
+Words in text: 300
+Words in headers: 4
+Words outside text (captions, etc.): 25
+Number of headers: 2
+Number of floats/tables/figures: 4
+Number of math inlines: 0
+Number of math displayed: 0
+
+File: ./sections/2/usb.tex
+Encoding: ascii
+Words in text: 763
+Words in headers: 13
+Words outside text (captions, etc.): 130
+Number of headers: 5
+Number of floats/tables/figures: 3
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  48+0+0 (0/0/0/0) _top_
+  120+1+48 (1/2/0/0) Subsection: USB-A
+  171+5+15 (1/0/0/0) Subsection: Benefits and Drawbacks of USB-C
+  211+2+67 (2/1/0/0) Subsection: USB-C
+  213+5+0 (1/0/0/0) Subsection: Benefits and Drawbacks of USB-C
+
+File: ./sections/2/types_of_data_transmission.tex
+Encoding: ascii
+Words in text: 217
+Words in headers: 0
+Words outside text (captions, etc.): 56
+Number of headers: 0
+Number of floats/tables/figures: 0
+Number of math inlines: 0
+Number of math displayed: 0
+
+File: ./sections/2/error_correction.tex
+Encoding: utf8
+Words in text: 806
+Words in headers: 10
+Words outside text (captions, etc.): 97
+Number of headers: 6
+Number of floats/tables/figures: 2
+Number of math inlines: 1
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  235+0+0 (0/0/0/0) _top_
+  86+2+52 (1/1/0/0) Subsection: Parity Blocks
+  258+4+45 (3/1/1/0) Subsection: Check Digits
+  227+4+0 (2/0/0/0) Subsection: Automatic Repeat Requests
+
+File: ./sections/2/packet_switching.tex
+Encoding: ascii
+Words in text: 411
+Words in headers: 6
+Words outside text (captions, etc.): 97
+Number of headers: 2
+Number of floats/tables/figures: 2
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  46+0+33 (0/1/0/0) _top_
+  124+4+58 (1/0/0/0) Subsection: Components of a packet
+  241+2+6 (1/1/0/0) Subsection: Packet Switching
+
+File: ./sections/2/ip_and_mac_addresses.tex
+Encoding: ascii
+Words in text: 1235
+Words in headers: 35
+Words outside text (captions, etc.): 234
+Number of headers: 12
+Number of floats/tables/figures: 6
+Number of math inlines: 0
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  318+10+39 (4/3/0/0) Subsection: IP addresses
+  416+9+89 (3/0/0/0) Subsection: IPv4 Address Assignment
+  242+6+63 (3/2/0/0) Subsection: MAC addresses
+  118+6+0 (1/0/0/0) Subsection: Differences between IP and MAC addresses
+  141+4+43 (1/1/0/0) Subsection: NATs (Network Address Translation)
+
