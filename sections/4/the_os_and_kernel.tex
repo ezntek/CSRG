@@ -84,11 +84,11 @@ This is when software ran on the CPU itself generates interrupts. This happens i
 \begin{itemize}
     \item Dividing by Zero
     \item Accessing memory out of bounds\footnote{Known as a segmentation fault. Since virtual memory is split into "containers" (see figure \ref{fig:virtmem}), when you access memory outside, the operating system disallows you to do so by sending an interrupt.}.
-    \item Two processes trying to read/write to the same mory at the same time (known as a race condition).
+    \item Two processes trying to read/write to the same memory at the same time (known as a race condition).
     \item Extra: Asking the operating to do something (system call/syscall).
 \end{itemize}
 
-System calls, or syscalls is out of the syllabus, but is important to all software. In order for programs to do literally anything, like acessing I/O devices, reading and writing to disk, printing text, reading text and accessing the network, it has to ask the operating system\footnote{The kernel, to be more specific.} to do it, because it is the only thing that has the privelege of doing such things (security reasons). Doing this creates a type of interrupt that forces the CPU to give extra attention to it.
+System calls, or syscalls is out of the syllabus, but is important to all software. In order for programs to do literally anything, like acessing I/O devices, reading and writing to disk, printing text, reading text and accessing the network, it has to ask the operating system\footnote{The kernel, to be more specific.} to do it, because it is the only thing that has the privilege of doing such things (security reasons). Doing this creates a type of interrupt that forces the CPU to give extra attention to it.
 
 \paragraph{Buffers}
 
@@ -169,7 +169,7 @@ For more examples, refer to page 158 of the textbook.
 
 User accounts are a concept you should be familiar with. Accounts on a computer are not dissimilar from accounts on, say, Google; different users have different usernames and passwords on a computer system. This is useful for identifying different people, separating different users' data, and permissions management.
 
-The OS manages all user accounts and sets up techniques to manage passwords and personal folders (home folders, what stores the desktop, documents, etc.) and manages who can access it. The OS creates different levels of privelege by segregating different users and granting them the ability to do different tasks based on their usernames and the user groups they are placed in. Some will have the privelege to write to the whole startup disk, while others only have privelege to write to their own home folder. Some will also have administrator priveleges while others will not.
+The OS manages all user accounts and sets up techniques to manage passwords and personal folders (home folders, what stores the desktop, documents, etc.) and manages who can access it. The OS creates different levels of privilege by segregating different users and granting them the ability to do different tasks based on their usernames and the user groups they are placed in. Some will have the privilege to write to the whole startup disk, while others only have privilege to write to their own home folder. Some will also have administrator privileges while others will not.
 
 This is not dissmilar to classroom management systems like the one at our school; teachers can create and set homework while we can only read them.
 
