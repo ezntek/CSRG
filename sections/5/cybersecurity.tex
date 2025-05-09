@@ -3,6 +3,120 @@
 
 \begin{document}
 
-stub
+Cybersecurity is a field of study that relates to keeping data safe and secure. Keeping data safe is important for a variety of reasons. It may be personal data, or it may be sensitive info, like credit cards, passwords, and the like.
 
-\end{document}
+There are many types of attacks covered in the syllabus, which will be discussed below. For more details, review the textbook.
+
+\subsection{Brute Force Attacks}
+
+These attacks involves a hacker that tries to crack passwords with brute force. This is usually done by trying common passwords first, then manually checking each combination of numbers and letters until the password is found. This method takes a lot of time.
+
+\subsection{Data Interception}
+
+Is an attack where data packets are intercepted when it is being transmitted from different devices.
+\begin{itemize}
+    \item As an example, if a WiFi password is being sent to the router for verification, one could intercept this data and
+          find the password.
+    \item This can also be done by connecting to the WiFi network outside the intended range, with special antennae, and attacking
+          from there.
+\end{itemize}
+
+\subsection{Distributed Denial-of-Service (DDoS) attacks}
+
+These are attempts at overloading a server such that it cannot function normally.
+\begin{itemize}
+    \item Many computers are typically targeted by malware (malicious software), reprogramming them to overload a chosen server with spam traffic.
+    \item The server attempts to handle all these requests at once, \emph{but fails, and therefore normal users cannot access services.}
+    \item One can usually determine if a website is DDoSed by slow network performance.
+    \item One may be protected as a potential victim by using an up-to-date antivirus.
+    \item Using a \textbf{firewall server} to disallow traffic from certain IP addresses.
+    \item Using e-mail filters to prevent attacks from spam e-mail.
+\end{itemize}
+
+\subsection{Hacking}
+
+THis is an attack where a malicious person gains access to a computer system, without the user/server owner's permission/intention.
+\begin{itemize}
+    \item This may lead to identity theft, collection of personal and classified information, or data corruption. 
+    \item \textbf{Encrypting data does not actually defend against hacking}, it makes the data meaningless to the hacker, but they can still delete it.
+    \item \emph{This can be prevented with a firewall.}
+    \item Ethical hacking exists, which is when companies allow independent hackers to attempt to infiltrate systems, to determine a system's reliability. They may also be used to identify vulnerabilities.
+\end{itemize}
+
+\subsection{Malware}
+
+This stands for \emph{malicious software,} computer programs written to intentionally do harm. They are great security risks, as they can open up new vulnerabilities in computer systems (backdoors, like back doors in landed houses).
+
+\subsubsection{Viruses}
+
+These are usually used interchangeably with malware, but is actually just a subset of what malware is. They \textbf{replicate themselves} on a host computer by duplicating the program, and sending it over e-mails and such to other computers. They have to be executed by some trigger before they can start replicating.
+
+After replication, they can cause harm, like deleting important files, filling the computer up with useless data, annoying the user, slowing the computer down, etc.
+
+To prevent this, one can run up-to-date antivirus software that can detect malware.
+
+\subsubsection{Worms}
+
+Unlike viruses, these can replicate and spread without being triggered by anything. Their intention is to spread to other computers, and to corrupt entire networks. They don't usually modify files on the computer to infect, they rely on security holes on networks themselves. Otherwise, they do similar harm like with viruses.
+
+They usually come as E-mail attachments, and only one user opening a worm-infested e-mail can infect the entire network.
+
+To prevent this, one can run up-to-date antivirus software that can detect malware.
+
+\subsubsection{Trojans (Trojan Horses)}
+
+They are not dissmilar from real-life trojan horses. These are programs that are disguised as legitimate software, but actually contains malicious software intended to set up attacks. They may also replace legitimate software, intending to do harm.
+
+They must typically be run by the user, and therefore arrive as e-mail attachments, but also malicious download links and websites that aim to trick you into thinking that it is legitimate software. Once your device is infected, and since this piece of code has network access, it may begin relaying your personal information, like passwords, public IP addresses, and so forth, to the hacker. This may also be used to deliver another malicious payload\footnote{A payload does not only apply to data packets. It refers to any useful part/part intended to do things.}, like spyware, or keyloggers\footnote{A program that logs which keys you press, therefore leaking things like passwords.}
+
+To prevent this, using firewalls can block off malicious download links, or even the IP addresses of hackers, therefore stopping the trojan from being able to send your data out of your computer. Using up-to-date antivirus software also helps.
+
+\subsubsection{Spyware}
+
+Is malware intended to spy on you. They gather information about you, and the information is sent back to the cybercriminal who created the spyware. It can monitor browser activity, activity on your computer, or capture personal files on your computer. This form of malware can be much more dangerous, and the cause of infection may be harder to detect. This may also contain a keylogger (see footnotes).
+
+\subsubsection{Adware}
+
+This is a type of malware that is quite mild, and usually only intends to flood your computer with advertising. This is, however, usually not released by companies, as this type of malware is mostly to annoy the user, however, it could lead to users being tricked and downloading trojan horses or other viruses.
+
+\subsubsection{Ransomware}
+
+Ransomware aims to lock a user's computer up, making it unusable until you pay the cybercriminal a ransom. This is the equivalent of \emph{holding your data hostage}. They wait until you send the ransom to them, else, they threaten you with deleting all the data on your computer. Typically, infections occur due to social engineering, trojan horses or even malicious ads from adware (although unlikely). Avoiding phishing e-mails also helps.
+
+\subsection{Phishing}
+
+Is when a cybercriminal sends legitimate-looking e-mails to users, which tricks users into possibly downloading malware, or usually, entering their personal details, under the presumption that it is a legitimate input form. It is pronounced identically to \emph{fishing.}
+
+Deleting these malicious e-mails usually solves this problem. Otherwise,
+
+\begin{itemize}
+    \item Users should become more aware of new phishing scams.
+    \item They should not blindly trust random e-mails with random input forms, and should delete e-mails that are clearly illegitimate.
+    \item Some browsers have anti-phishing plugins, that tell you about phishing attacks.
+    \item Look out for if your connection to a website is over {\ccmono https}.
+    \item Be vigilant about random pop-ups.
+\end{itemize}
+
+A niche term is \textbf{spear-phishing}, which is when cybercriminals target specific important people to accidentally leak their information, motivated by the intention of espionage, or using their information against them in some other way. Regular phishing disregards who they phish for.
+
+\subsection{Pharming}
+
+This begins by installing malicious code on a user's computer, that redirects them to a fake version of a website, like a banking service. Unlike phishing, the user is actually unaware of this, as the website had been changed "for them". The risks are the same as phishing. Not dissimilar from the previous example, this is pronounced the same as \emph{farming.}
+
+This is usually done by \textbf{DNS Cache Poisoning}. A DNS (recall figure \ref{fig:dns} if needed) is a lookup table between the domain names of websites, like {\ccmono google.com}, to IP addresses, as browsers cannot read domain names, only IP addresses. a \emph{DNS Cache} is a short term list of frequently used domain-IP pairs, stored locally. When it is poisoned, the IP the domain is associated with is changed to a website that collects your data.
+
+To mitigate this, using up-to-date antivirus software can detect these attacks. Modern browsers can usually detect phishing and pharming. However, if the non-local DNS is poisoned, the IP changes for more people, meaning mitigations become harder. Otherwise, prevention methods are identical to those for Phishing.
+
+\subsection{Social engineering}
+
+\emph{Sidenote: the more this chapter went on, the more humanities-like it became. This does not break the trend. Interesting observation, eh?}
+
+Unlike all the other methods, which involve Computer Science concepts, this is straight-up cold hard manipulation. Yes, users are manipulated.
+
+\blockquote{\textcolor{gray}
+Hello John. This is your aunt that you changed your diapers when you were 5 years, 42 months and 69 minutes old. I am broke. Please send me your credit card number, the cardholder's name, and the little security number at the back.
+
+If you do not send me this information, I will spontaneously combust!
+}
+
+In a real-life case, it would be less extreme and more realistic. However, the user ends up downloading malware in some way, shape, or form, and they become victims of social engineering.
