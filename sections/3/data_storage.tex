@@ -223,9 +223,16 @@ These are like SSDs, but use a slightly different type of electronic flash chip.
 \subsection{Optical Media (CDs, DVDs, BDs)}
 \label{3:sec:optical_media}
 
-Optical media look like discs with a hole in the middle for alignment. Unlike all the other storage devices, optical media just consists of the medium. You need a separate storage device, called an optical drive (or a DVD drive, CD drive etc.) to read them. The shiny side of the disc is what actually holds the data. 
+Optical media look like discs with a hole in the middle for alignment. Unlike all the other storage devices, optical media just consists of the medium. You need a separate storage device, called an optical drive (or a DVD drive, CD drive etc.) to read them. The shiny side of the disc is what actually holds the data.
 
-There are 3 types of discs, CDs, DVDs and BDs. CDs hold around 700mb of data, and was made for music. DVDs can hold around 4.7GB of data, and was made for standard definition films (lower resolution). BDs were made recently and is made for very high quality movies. It can hold anywhere between 25 and 100 GB of data. They are shown below:
+\emph{This type of data storage is called offline, as the actual thing that stores the data is separate from the device that reads it.} This means that to transfer data from one place to another, you just need to carry the disc, not the whole drive.
+
+There are 3 types of discs, CDs, DVDs and BDs.
+\begin{itemize}
+    \item CDs hold around 700mb of data, and was made for music.
+    \item DVDs can hold around 4.7GB of data, and was made for standard definition films (lower resolution).
+    \item BDs were made recently and is made for very high quality movies. It can hold anywhere between 25 and 100 GB of data. They are shown below:
+\end{itemize}
 
 \begin{figure}[H]
     \centering
@@ -234,7 +241,12 @@ There are 3 types of discs, CDs, DVDs and BDs. CDs hold around 700mb of data, an
     \label{fig:opticalmedia}
 \end{figure}
 
-Grooves and flat areas (pits and lands) are used to represent 1s and 0s on optical media. The image that depicts the DVD has a darker area; that is what data written to a DVD looks like. A laser is shone onto the troughs/flat areas, and the reflection angle is measured. Data can only be written to a CD \textbf{ONCE}\footnote{This is called burning.} and cannot be rewritten\footnote{They can, but only for special CDs with the -RW suffix (-RE for blu-rays)}
+\begin{itemize}
+    \item Grooves and flat areas (pits and lands) are used to represent 1s and 0s on optical media.
+    \item The image that depicts the DVD has a darker area; that is what data written to a DVD looks like.
+    \item A laser is shone onto the troughs/flat areas, and the reflection angle is measured.
+    \item Data can only be written to a CD \textbf{ONCE}\footnote{This is called burning.} and cannot be rewritten\footnote{They can, but only for special CDs with the -RW suffix (-RE for blu-rays)}
+\end{itemize}
 
 \subsection{Barcodes}
 
@@ -258,11 +270,42 @@ QR codes are like barcodes, but 2D. Consider the following QR code that stores s
     \label{fig:qrcode}
 \end{figure}
 
-They are 2D matrices of squares that store small amounts of data; but more so than barcodes. They store binary data, and have error correction data encoded within them, to avoid errors in reading when the QR code is damaged. There are also large regions that act as anchors for QR code reading software to de-warp the QR code if scanned at an angle.
+\begin{itemize}
+    \item They are 2D matrices of squares that store small amounts of data, but more so than barcodes.
+    \item They encode data in binary at its core, but can also store text, and therefore web links.
+    \item They have error correction built into them, to avoid errors in reading when the QR code is damaged.
+    \item There are large regions that act as anchors, for QR reading software to de-warp the QR code when scanned at an angle.
+\end{itemize}
 
 \subsection{Cloud Storage}
 
-stub
+Cloud storage is a type of storage where your data is not stored on a physical device that you own. Instead, it is stored on remote servers that handle all your data. Usually, the same data is stored on more than one server in case of server maintenance and repair, allowing users to access data at any time. This is known as redundancy, dissimilar to the usual definition.
+
+\begin{itemize}
+    \item An example is \textbf{Google Drive.}
+    \item Your data is uploaded to some website or service, which is then stored on the secondary storage on their computers.
+    \item They offer you a web interface to access your files, usually.
+    \item When you want to have your files locally, you must download them manually.
+\end{itemize}
+
+\textbf{Benefits include:}
+
+\begin{itemize}
+    \item Files can be accessed from any device at any time, across multiple devices, given that internet access is available.
+    \item There is no need to carry a storage device or a medium, to access or store data.
+    \item Backups are done by the provider of the service.
+    \item If a customer's storage devices fail, and they have backed the data up to cloud storage, it can help them restore their data.
+    \item The cjloud system offers almost unlimited storage capacity, given that you pay.
+\end{itemize}
+
+\textbf{Drawbacks include:}
+
+\begin{itemize}
+    \item A slow internet connection makes cloud storage very annoying to use, as data retrieval becomes slow.
+    \item Large storage capacities become expensive from the server.
+    \item If a data breach happens to the cloud storage provider, your data may be compromized.
+    \item If the cloud service provider's backups fail, your data may also be lost.
+\end{itemize}
 
 \subsection{Medium vs. Storage Device}
 \label{3:sec:medium_vs_storage_device}

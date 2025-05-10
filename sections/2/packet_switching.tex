@@ -46,7 +46,14 @@ Here are they:
 
 Packet switching is the next step after slicing up data into packets. This is done because sending data across large distances all at once is prone to failure (what happens if a slight portion of the data is corrupted? the data must be sent all over again, taking time). 
 
-This technique involves sending packets onto multiple paths that reach the same destination. They begin by being sent out onto the network; they travel seperately but at the same time and when all the packets arrive at the destination, they are put back together via the sequence number. The role of the router on each node is to determine the next router the packet should go to. For more information on routers, see \ref{3:sec:routers} 
+This technique involves sending packets onto multiple paths that reach the same destination.
+
+\begin{enumerate}
+    \item They begin by being sent out onto the network, from a router.
+    \item They each travel separately, but at the same time.
+    \item The role of each router/node is to determine which is the most optimal next router to send the packet. For more info on routers, see section \ref{3:sec:routers}. 
+    \item When they reach the destination router, as seen in the packet, they are put back together in \emph{sequence number order.}
+\end{enumerate}
 
 \begin{figure}[h]
     \centering

@@ -6,7 +6,7 @@
 \subsection{IP addresses}
 \label{2:sec:ip}
 
-IP stands for the Internet Protocol, and IP addresses are like street addresses; in the sense that they represent locations on a network. There are 2 main types, IPv4 and IPv6 addresses.
+IP stands for the Internet Protocol, and IP addresses are like street addresses; in the sense that they \emph{represent locations on a network}. This allows for data to be transmitted between devices. There are 2 main types, IPv4 and IPv6 addresses.
 
 \begin{figure}[h]
     \centering
@@ -26,8 +26,6 @@ Are \textbf{32-bit values} represented as 4 3-digit numbers with dots between th
 \end{figure}
 
 Figure \ref{fig:ipaddr_breakdown} shows the two main components of IPv4 addresses; the first component determines the network itself, and the second component determines the device on the network uniquely.
-
-In terms of private and public networks it will be covered more in \textbf{Chapter 4} and later sections about NATs.
 
 \paragraph{Public IPv4 Addresses}
 
@@ -63,11 +61,13 @@ These private IPs belong in a local network, where devices in the same approxima
 
 \subsection{IPv4 Address Assignment}
 
-When you connect to the school network or your home WiFi network, you need to get an IP address in order for your device to communicate with the router, to transmit data to and from websites like Google. Without it, your device would be useless. 
+When you connect to the school network or your home WiFi network, you need to get an IP address to \emph{identify yourself on the network}, and to allow for data transmission. Without it, no device would be able to send you data, as they won't know where you are on the network.
+
+You may interpret it as an address to your home. A delivery driver would not be able to send you anything if you don't have an address
 
 \subsubsection{Static IP assignment}
 
-You must ask the router for an IP address; and there are 2 main methods. This one is called static IP assignment; this means that the IP address you have on the network does \textbf{not} change, and \emph{your device chooses the IP address it has}. The IP you assign to yourself is now assigned to you for an indefinite\footnote{not infinite, just an unknown amount of time} time.
+Static IP assignment involves your device \emph{declaring to the router} that your IP address is so and so, an address that you assign to yourself. It is set to you for an indefinite\footnote{not infinite, just an unknown amount of time} amount of time, i.e. until you choose a new address.
 
 \textbf{Pros include:}
 \begin{itemize}
@@ -88,7 +88,7 @@ You must ask the router for an IP address; and there are 2 main methods. This on
 
 % TODO: diagram
 
-This is like static IP assignment, as you are receiving an IP address to identify yourself. But here, you use a protocol called DHCP (Dynamic Host Configuration Protocol) to talk to the router nicely to ask for an available IP address. Every time you connect to the network, your device talks to the router for an IP. Sometimes it is different, and sometimes it is the same as before.
+This method involves your device \textbf{asking the router for an IP address}. Your device communicates with a component of the router, called a \textbf{DHCP server} with the \textbf{Dynamic Host Configuration Protocol (DHCP)}, which detects which IP addresses are available, and assigns you the most optimal one.
 
 This is by far the most common method.
 
@@ -128,15 +128,26 @@ The first 3 hexadecimal bytes (2 digits) identify the maker of the device\footno
 
 Figure \ref{fig:macaddress} shows the MAC address of one of my computers. The first 3 components identify the manufacturer, and the last 3 uniquely identifiers my device.\footnote{In this example, I have changed the default MAC address to a randomized one, so the manufacturer may be invalid if you try to look it up.}
 
-\subsubsection{Universally Administered}
+\subsubsection{Universally Administered (UAA)}
 
 These addresses are by far the most common; they are the addresses assigned by manufacturers and universally identify the device. They are used to ensure the unique identification of the device throughout the globe, and avoids conflicts with other MAC addresses.
 
+\begin{itemize}
+    \item These are the addresses assigned by the manufacturer stored on your NIC (see \ref{3:sec:network_hardware}).
+    \item When a MAC address is mentioned, this is what one typically refers to.
+    \item These uniquely identify you across multiple networks, and avoids conflicts with other MAC addresses.
+\end{itemize}
+
 \subsubsection{Locally Administered}
 
-These are a less commonly talked about form of MAC addresses, these are assigned to the computer by network administrators. These addresses have no guarantee of being completely unique from computer-to-computer, and are used in specific cases where addresses may conflict with each other.
+These addresses are a lot less common, but they have some unique properties:
 
-Some organizations, such as mainframe or cluster computers, require MAC addresses to be in a certain format. LAAs allow for the MAC address to be changed, therefore allowing one to change the format. It may also be used to bypass a firewall, as some require the MAC addresses to be in a certain format.
+\begin{itemize}
+    \item They are assigned by network administrators for a particular network, not by the manufacturer.
+    \item These addresses do not guarantee a unique address from router-to-router.
+    \item These are only used in cases where certain MAC addresses may conflict with each other, or when a firewall needs to restrict certain devices on the network but not all of them. THese are also used in things like mainframes or cluster computers.
+    \item Likewise, they can also be used to bypass a firewall.
+\end{itemize}
 
 \emph{Extra: LAA addresses also have a property where the 7th bit of the 1st byte of the MAC address is set to 1. UAA addresses have that bit set to 0.}
 
@@ -146,7 +157,7 @@ Some organizations, such as mainframe or cluster computers, require MAC addresse
     \hline 
     \textbf{MAC addresses} & \textbf{IP addresses}
     \\ \hline
-    Identifies unique information about a device on a network & Identifies the location of something on a network
+Identifies unique information about a device on a network & Identifies the location of something on a network
     \\ \hline
     Unique for the device on the network & Only unique if it is a public IP. Private IPs are only unique to that network, and addresses across many private IPs may be the same, as they are powered by different routers.
     \\ \hline
@@ -163,7 +174,7 @@ Some organizations, such as mainframe or cluster computers, require MAC addresse
 
 By now you should be familiar with the concept of private versus public IPs. Private IP addresses only exist on internal private networks, and are separate from all public IPs. How do devices on private IPs then transmit data to websites on public networks?
 
-NATs helps one accomplish this. They allow private IP addresses and public IP addresses to be tempoarily linked together to create a channel whereby data can flow. These are typically in your home router to map devices connected to it to the router's public IP address.
+NATs allow private IP addresses and public IP addresses to be tempoarily linked together to create a channel whereby data can flow. These are typically in your home router to map devices connected to it to the router's public IP address.
 
 \begin{figure}[h]
     \centering
@@ -172,6 +183,7 @@ NATs helps one accomplish this. They allow private IP addresses and public IP ad
     \label{fig:nat}
 \end{figure}
 
-As seen in figure \ref{fig:nat}, computers on the home network can request for websites (in this case, Yahoo, as the diagram is presumably very old), and the NAT in the router can add your device to a tempoary table that shows where traffic from one private IP should go, and vice versa.\footnote{Do not worry about the port; this allows 65535 channels of data to be open on one IP address, as one single IP is quite limiting.}
+Figure \ref{fig:nat} depicts home computers on a network that requests to visit a website, like Yahoo\footnote{One could presume that this image is quite old}. A lookup table is established in the router, where the IP the computer has is associated with the IP of yahoo. This then allows the devices to begin packet switching through this device\footnote{Do not worry about the port; this allows 65535 channels of data to be open on one IP address, as one single IP is quite limiting.}.
+
 
 \end{document}
