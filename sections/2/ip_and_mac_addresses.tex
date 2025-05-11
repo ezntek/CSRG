@@ -14,7 +14,7 @@ IP stands for the Internet Protocol, and IP addresses are like street addresses;
     \caption{Output from the Linux {\ccmono ip} utility, showing IPv4 and V6 addresses}
 \end{figure}
 
-\paragraph{IPv4 Addresses}
+\subsection{IPv4 Addresses}
 
 Are \textbf{32-bit values} represented as 4 3-digit numbers with dots between them, like {\ccmono 192.168.0.1} with each value ranging between 0-255. There are 2 tyes of IP addresses, \emph{Public} and \emph{Private} IP addresses.
 
@@ -103,6 +103,24 @@ This is by far the most common method.
     \item If you're connected to a video call or voice call through VoIP\footnote{Basically making phone or video calls through a network and not cell towers.}, if your IP address changes, it may disconnect the call\footnote{It is not necessarily true, as your IP is not jumbled at regular intervals.}.
     \item If your device is old and does not support the DHCP protocol, you cannot use it. In short, it may not support all devices.
     \item Connection time takes longer, you must send a {\ccmono DHCPLEASE} message to the router for the IP, the router must calculate an IP, and the router must send a {\ccmono DHCPBACK} with your IP. This typically takes 5 seconds but may take up to 25 seconds.
+\end{itemize}
+
+\subsection{IPv6 addresses}
+\label{2:sec:ipv6}
+
+These are less talked about in our syllabus. They typically look as follows:
+
+\begin{minted}{text}
+ffff:ffff:ffff:ffff:ffff:ffff
+\end{minted}
+
+with 6 sets of 4 hex digits, totalling \textbf{128 bits.}
+
+\begin{itemize}
+    \item They were created because there were not enough IPv4 addresses, and mapping subnets (sub-networks) became harder and harder.
+    \item This type of IP address addresses the issue by providing plenty of combinations of addresses.
+    \item Some\footnote{disputed} claim taht it is more secure.
+    \item It is still not widely adopted, as of 2025.
 \end{itemize}
 
 \subsection{MAC addresses}

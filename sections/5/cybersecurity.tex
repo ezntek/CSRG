@@ -85,7 +85,7 @@ Ransomware aims to lock a user's computer up, making it unusable until you pay t
 
 \subsection{Phishing}
 
-Is when a cybercriminal sends legitimate-looking e-mails to users, which tricks users into possibly downloading malware, or usually, entering their personal details, under the presumption that it is a legitimate input form. It is pronounced identically to \emph{fishing.}
+Is when a cybercriminal \textbf{sends legitimate-looking e-mails to users, which tricks users} into possibly downloading malware, or usually, \textbf{entering their personal details}, under the presumption that it is a legitimate input form. It is pronounced identically to \emph{fishing.}
 
 Deleting these malicious e-mails usually solves this problem. Otherwise,
 
@@ -101,11 +101,15 @@ A niche term is \textbf{spear-phishing}, which is when cybercriminals target spe
 
 \subsection{Pharming}
 
-This begins by installing malicious code on a user's computer, that redirects them to a fake version of a website, like a banking service. Unlike phishing, the user is actually unaware of this, as the website had been changed "for them". The risks are the same as phishing. Not dissimilar from the previous example, this is pronounced the same as \emph{farming.}
+This begins by \textbf{installing malicious code on a user's computer}, that redirects them to a \textbf{fake version of a website}, like a banking service. Unlike phishing, the user is actually unaware of this, as the website had been changed "for them". \textbf{Their data is then collected through the fake website}. The risks are the same as phishing. Not dissimilar from the previous example, this is pronounced the same as \emph{farming.}
 
 This is usually done by \textbf{DNS Cache Poisoning}. A DNS (recall figure \ref{fig:dns} if needed) is a lookup table between the domain names of websites, like {\ccmono google.com}, to IP addresses, as browsers cannot read domain names, only IP addresses. a \emph{DNS Cache} is a short term list of frequently used domain-IP pairs, stored locally. When it is poisoned, the IP the domain is associated with is changed to a website that collects your data.
 
 To mitigate this, using up-to-date antivirus software can detect these attacks. Modern browsers can usually detect phishing and pharming. However, if the non-local DNS is poisoned, the IP changes for more people, meaning mitigations become harder. Otherwise, prevention methods are identical to those for Phishing.
+
+\paragraph{Phishing vs Pharming}
+
+A good analogy is that \textbf{Phishing involves someone actively fishing (sending malicious e-mails) in a lake (of users) for data}, whereas \textbf{Pharmers sit back and do no active work,} as they have already \textbf{infected users with malware some other way.}
 
 \subsection{Social engineering}
 
