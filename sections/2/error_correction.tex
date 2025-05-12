@@ -37,6 +37,8 @@ Check digits are another form of error correction; usually involving checking fo
 
 typically, barcode readers that read these numbers may encouter stains on the physical code and such. Therefore, error correction is needed to make sure the data is not damaged to the point the barcode cannot be read.
 
+This also applies for international standard book numbers, or ISBNs. There is a check digit at the very end of every ISBN code. \emph{Since ISBN-13 and Modulo-11 calculations are not in your syllabus}, you just need to know that barcodes and ISBN codes use check digits.\footnote{They will still be included, just in case if you want to know them, or if your teacher decided to teach it to you.}
+
 \subsubsection{ISBN-13}
 
 To calculate:
@@ -59,7 +61,7 @@ To verify:
 
 \subsubsection{Modulo-11}
 
-To calculate:
+\emph{Note that Modulo-11 is not at all in your syllabus anymore. However, it may still be taught; if it is assessed internally in your school, as it is still in your textbook, it is still included.} To calculate:
 
 \begin{enumerate}
     \item You must calculate a \emph{Max Weighting}. Take the length of your number data, and add 1 to get your weighting.
@@ -68,13 +70,6 @@ To calculate:
     \item Add all the products from step 3 together.
     \item Divide the result from step 4 by 11, and note down the remainder.
     \item Subtract your remainder from 11.\footnote{As an example, if you got 7 from step 5, your remainder is 4}. This is the check digit.
-\end{enumerate}
-
-To verify:
-
-\begin{enumerate}
-    \item perform steps 1-5.
-    \item If the remainder is 0, the check digit is correct.
 \end{enumerate}
 
 \subsection{Automatic Repeat Requests}

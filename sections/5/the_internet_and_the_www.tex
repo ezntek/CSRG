@@ -52,6 +52,8 @@ HTTP, or the hypertext transfer protocol, is a set of rules that defines how dat
 
 HTTPS is like HTTP, but uses TLS (Transport Layer Security) or SSL (Secure Socket Layer)\footnote{All TLS-compatible software are compatible with SSL, as TLS was designed to be compatible with SSL} to communicate. This means that instead of sending the raw bytes of the HTTP request, containing potentially sensitive information, it is encrypted so that onlookers cannot modify or read the data. the S in HTTPS means its secure.
 
+For more information as to how SSL works\footnote{For some reason, Cambridge does not expect you to know how TLS works, despite it being superior in every way, and that nobody uses it anymore.}, refer to section \ref{5:sec:ssl}
+
 \subsection{Web browsers}
 
 These are programs that are capable of reading HTML files, displaying website layouts, playing sound, video and viewing PDFs, among others. They have the ability to connect to the internet and allows the user to freely access the worldwide web. You are likely using one right now; Google Chrome and Mozilla Firefox are very popular ones.
@@ -142,5 +144,20 @@ Since these remain on disk, they can be used to \textbf{target users} by sending
 \end{enumerate}
 
 For more details, see page 185 of the textbook.
+
+\subsection{How SSL works}
+\label{5:sec:ssl}
+
+\emph{NOTE: This came up in the May/June 2025 paper.} The method described is not the simplified version as shown in the textbook. This is because the textbook version is vague. If you require a simpler explanation, refer to figure 5.23 \textbf{in the textbook.}
+
+\paragraph{The detailed way}
+
+\begin{enumerate}
+    \item The client sends a request to the browser, sharing which encryption algorithms are supported.
+    \item The server responds with its SSL certificate, and the encryption method that it chose.
+    \item The client validates the certificate, and checks if it had expired, and was issued by a trusted certificate authority.
+    \item The client generates a session key for encryption, and encrypts it with the server's public key. It is sent to the server.
+    \item The client and the server now have the same session key, which is used to both encrypt and decrypt data during the session. \emph{This session key is symmetric, as asymmetric encryption is expensive.}
+\end{enumerate}
 
 \end{document}
