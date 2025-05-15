@@ -93,7 +93,7 @@ Deleting these malicious e-mails usually solves this problem. Otherwise,
     \item Users should become more aware of new phishing scams.
     \item They should not blindly trust random e-mails with random input forms, and should delete e-mails that are clearly illegitimate.
     \item Some browsers have anti-phishing plugins, that tell you about phishing attacks.
-    \item Look out for if your connection to a website is over {\ccmono https}.
+    \item Look out for if your connection to a website is over {\mono https}.
     \item Be vigilant about random pop-ups.
 \end{itemize}
 
@@ -103,7 +103,7 @@ A niche term is \textbf{spear-phishing}, which is when cybercriminals target spe
 
 This begins by \textbf{installing malicious code on a user's computer}, that redirects them to a \textbf{fake version of a website}, like a banking service. Unlike phishing, the user is actually unaware of this, as the website had been changed "for them". \textbf{Their data is then collected through the fake website}. The risks are the same as phishing. Not dissimilar from the previous example, this is pronounced the same as \emph{farming.}
 
-This is usually done by \textbf{DNS Cache Poisoning}. A DNS (recall figure \ref{fig:dns} if needed) is a lookup table between the domain names of websites, like {\ccmono google.com}, to IP addresses, as browsers cannot read domain names, only IP addresses. a \emph{DNS Cache} is a short term list of frequently used domain-IP pairs, stored locally. When it is poisoned, the IP the domain is associated with is changed to a website that collects your data.
+This is usually done by \textbf{DNS Cache Poisoning}. A DNS (recall figure \ref{fig:dns} if needed) is a lookup table between the domain names of websites, like {\mono google.com}, to IP addresses, as browsers cannot read domain names, only IP addresses. a \emph{DNS Cache} is a short term list of frequently used domain-IP pairs, stored locally. When it is poisoned, the IP the domain is associated with is changed to a website that collects your data.
 
 To mitigate this, using up-to-date antivirus software can detect these attacks. Modern browsers can usually detect phishing and pharming. However, if the non-local DNS is poisoned, the IP changes for more people, meaning mitigations become harder. Otherwise, prevention methods are identical to those for Phishing.
 

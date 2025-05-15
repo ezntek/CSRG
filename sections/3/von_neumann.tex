@@ -60,7 +60,7 @@ Registers, like RAM is for fast data storage. The main difference between regist
 
 \begin{itemize}
     \item \textbf{The Program Counter (PC)} is a special register that stores the \emph{address} of the next instruction to be executed on the CPU.\footnote{This is because on the fetch stage, it fetches the current instruction at the PC's address, but is incremented immediately after. Therefore, when the next instruction must be run, which becomes the current address, its address is in the PC.}
-\item \textbf{The Accumulator} is another special register in the CPU that stores intermediate results of arithmetic or logical operations, like the result of $3+5$ or {\ccmono 1 OR 0}. It can accumulate data over time for longer chains of instructions\footnote{In modern CPUs, there is no accumulator. There are so many general-purpose registers that any one can act as an accumulator.}
+\item \textbf{The Accumulator} is another special register in the CPU that stores intermediate results of arithmetic or logical operations, like the result of $3+5$ or {\mono 1 OR 0}. It can accumulate data over time for longer chains of instructions\footnote{In modern CPUs, there is no accumulator. There are so many general-purpose registers that any one can act as an accumulator.}
     \item \textbf{The Current Instruction Register (CIR)} stores the current instruction being executed. This differs from the PC, as the PC stores the \emph{location} of the instruction, whereas the CIR stores the instruction itself.
     \item \textbf{The Memory Address Register (MAR)} stores addresses in memory that must be read from or written to.
     \item \textbf{The Memory Data Register (MDR)} stores the data that must be read from or written to memory. This differs from the MAR, as the MAR stores \emph{locations} (addresses), whereas the MDR stores the locations themselves.
@@ -70,12 +70,12 @@ General purpose registers also exist, which are registers that can be used for a
 
 \paragraph{Extra for experts}
 
-The von neumann architecture in this syllabus is covered in a great way, but this does not reflect modern computers. For instance, there are many more special registers in a modern computer. For a CPU architecture called {\ccmono aarch64} or {\ccmono arm64} (very popular; used in Apple Macs, phones and some game consoles), there are a few more\footnote{This may be specific to aarch64, but other architectures have them too.}
+The von neumann architecture in this syllabus is covered in a great way, but this does not reflect modern computers. For instance, there are many more special registers in a modern computer. For a CPU architecture called {\mono aarch64} or {\mono arm64} (very popular; used in Apple Macs, phones and some game consoles), there are a few more\footnote{This may be specific to aarch64, but other architectures have them too.}
 
 \begin{itemize}
     \item \textbf{The Stack Pointer (SP)} stores the location of the stack. The stack is where large-sized variables are stored in code; it is slower but more flexible than registers as it can hold more data. The stack pointer stores where this continuous chunk of memory begins.
     \item \textbf{The Link Register (LR)} stores the address of the last executed instruction before a branch. Branches are instructions that tell the CPU to go to a specific location to execute instructions, then go back. Before the program counter is set to where the new instructions are, the link register is set so that the CPU knows where to return to after executing the branch.
-    \item \textbf{The Current Program Status Register (CPSR)} stores important information about instruction results. After, let's say a comparison (such as {\ccmono 5 > 3}), the result is stored in the CPSR. Then, later instructions read it to execute conditional branches (if statements in code).
+    \item \textbf{The Current Program Status Register (CPSR)} stores important information about instruction results. After, let's say a comparison (such as {\mono 5 > 3}), the result is stored in the CPSR. Then, later instructions read it to execute conditional branches (if statements in code).
 \end{itemize}
 
 \subsection{Cache}

@@ -68,15 +68,15 @@ This means that unnecessary data is eliminated from the file to reduce its size.
 
 \paragraph{Lossless (Run-length Encoding)}
 
-This means that no data is discarded to reduce the file size. RLE is a method in the syllabus you must know that collapses repeating sequences of the same data into one chunk of data. Consider the string {\ccmono aaaaabbbccdddd}. Instead of storing it directly as their ASCII values, we can store
+This means that no data is discarded to reduce the file size. RLE is a method in the syllabus you must know that collapses repeating sequences of the same data into one chunk of data. Consider the string {\mono aaaaabbbccdddd}. Instead of storing it directly as their ASCII values, we can store
 
-{\centering\ccmono
+{\centering\mono
     05 97 03 98 02 99 04 100
 \medskip}
 
 as there are 5 ASCII code 97s, 3 98s, 2 99s, and 4 100s, that correspond to 5×a, 3×b, 2×c, and 4×d. One can even compress images with this method. Consider figure \ref{fig:8x8image}. Its binary representation is shown here (1 is now black, and 0 is now white):
 
-{\ccmono
+{\mono
     1 1 1 1 1 1 1 1\\
     1 0 0 0 0 0 0 1\\
     1 0 1 1 1 1 0 1\\
@@ -89,7 +89,7 @@ as there are 5 ASCII code 97s, 3 98s, 2 99s, and 4 100s, that correspond to 5×a
 
 We can represent this in RLE format as:
 
-{\ccmono
+{\mono
     81\\
     11 60 11\\
     11 10 41 10 11\\
@@ -100,6 +100,6 @@ We can represent this in RLE format as:
     81\\
 \medskip}
 
-which represents the same data, but now compressed (note that {\ccmono 81} means 8 1's). This also goes for colors, just substitute the different colors for numerical/binary values. Refer to page 37 in the textbook for more examples.
+which represents the same data, but now compressed (note that {\mono 81} means 8 1's). This also goes for colors, just substitute the different colors for numerical/binary values. Refer to page 37 in the textbook for more examples.
 
 \end{document}

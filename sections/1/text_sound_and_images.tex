@@ -35,7 +35,7 @@ In order to convert this into digital data (represented in binary), it must pass
     \label{fig:soundwave_sampled}
 \end{figure}
 
-with points being placed on the curve. Each one of those points' data values can now be stored in binary, like {\ccmono 1001}\footnote{in math terms, this is now a discrete function, as there are only some values at which the function is defined}. 
+with points being placed on the curve. Each one of those points' data values can now be stored in binary, like {\mono 1001}\footnote{in math terms, this is now a discrete function, as there are only some values at which the function is defined}. 
 
 The \textbf{sampling resolution} is how accurate each one of the points are. If the sampling resolution is low (4 bytes), the range of data it can be in binary is low, meaning less accuracy. However, if the sampling resolution is high (44,100 bytes), each data point stored is much more accurate.
 
@@ -69,7 +69,7 @@ Finally, the \textbf{sample size} is how long the sample is; the length of the w
 
 To calculate the file size, perform (everything except explicitly mentioned is in bytes):
 
-{\centering\ccmono
+{\centering\mono
 file size = sample size * sampling resolution * sampling rate (Hz)
 }
 
@@ -91,7 +91,7 @@ Figure \ref{fig:8x8image} is a black-and white image. Let us suppose that each b
 
 \medskip
 
-{\ccmono\centering
+{\mono\centering
     0 0 0 0 0 0 0 0\\
     0 1 1 1 1 1 1 0\\
     0 1 0 0 0 0 1 0\\
@@ -114,7 +114,7 @@ Now let us represent \ref{fig:8x8colorimage} in binary. We will now assume that 
 
 \newpage 
 
-{\ccmono\centering
+{\mono\centering
     3 0 2 0 0 2 0 3\\
     0 4 3 4 4 3 4 0\\
     1 2 3 3 3 3 2 1\\
@@ -129,7 +129,7 @@ Now let us represent \ref{fig:8x8colorimage} in binary. We will now assume that 
 
 The number of bytes used to store one pixel of data is called the \emph{bit depth}. Since we used 0, 1, 2, 3, 4 to represent our image, we actually need a whole 8 bits or 1 byte to represent each pixel. This means that the bit depth is one byte (which gives us 8 colors). The resolution of figure \ref{fig:8x8colorimage} is the size of the image, which is 8x8 pixels, meaning 64 in total. As the resolution increases, more data can be held. To calculate the file size, perform:
 
-{\centering\ccmono
+{\centering\mono
 file size (bytes/bits) = pixels wide * pixels high * bit depth (bytes/bits)
 }
 
